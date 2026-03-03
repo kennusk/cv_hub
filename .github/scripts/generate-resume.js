@@ -16,6 +16,7 @@ import path from 'path';
 import { parse } from 'yaml';
 import {
   Document, Packer, Paragraph, TextRun, HeadingLevel, BorderStyle,
+  AlignmentType, LevelFormat,
 } from 'docx';
 
 // ── Paths ─────────────────────────────────────────────────────────────────────
@@ -28,6 +29,9 @@ const FILES = [
   { yaml: 'en.yaml', suffix: 'en' },
   { yaml: 'ru.yaml', suffix: 'ru' },
 ];
+
+// Numbering config reference name
+const BULLETS_REF = 'resume-bullets';
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -139,10 +143,11 @@ function heading(text) {
   });
 }
 
+// ✅ Correct: uses numbering config — fixes the horizontal bar artifacts
 function bullet(text) {
   return new Paragraph({
     children: [new TextRun({ text })],
-    bullet: { level: 0 },
+    numbering: { reference: BULLETS_REF, level: 0 },
     spacing: { after: 40 },
   });
 }
@@ -261,6 +266,27 @@ function generateDocx(cv) {
   }
 
   return new Document({
+    // ✅ Proper bullet numbering config — fixes the horizontal bar artifacts
+    numbering: {
+      config: [
+        {
+          reference: BULLETS_REF,
+          levels: [
+            {
+              level: 0,
+              format: LevelFormat.BULLET,
+              text: '\u2022',
+              alignment: AlignmentType.LEFT,
+              style: {
+                paragraph: {
+                  indent: { left: 720, hanging: 360 },
+                },
+              },
+            },
+          ],
+        },
+      ],
+    },
     styles: {
       default: {
         document: { run: { font: 'Calibri', size: 22 } },
