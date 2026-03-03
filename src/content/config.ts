@@ -1,3 +1,10 @@
+//
+//  config.ts
+//  CV Hub
+//
+//  Created by Alexander Gusarov on 03.03.2026.
+//  @spartan121
+//
 import { defineCollection, z } from 'astro:content';
 
 // TEMP: relaxed schemas to unblock development.
