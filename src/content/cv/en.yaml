@@ -1,0 +1,81 @@
+name: Alexander Gusarov
+title: DevOps Engineer
+summary: >
+  DevOps Engineer focused on production Kubernetes, Infrastructure as Code and AWS.
+  Automated management for 750+ Linux servers (99.9% uptime), optimized cloud costs,
+  and reduced deploy time from 8 to 2 minutes.
+
+contacts:
+  - label: Email
+    url: mailto:spartan.dgs121@icloud.com
+  - label: GitHub
+    url: https://github.com/KeeGooRoomiE
+  - label: Telegram
+    url: https://t.me/spartan121
+  - label: Portfolio
+    url: https://github.com/KeeGooRoomiE
+
+skills:
+  - group: Kubernetes
+    items:
+      - Kubernetes
+      - Helm
+      - Docker
+  - group: IaC
+    items:
+      - Terraform
+      - Ansible
+  - group: Cloud
+    items:
+      - AWS (EC2, S3, VPC, IAM, ALB)
+  - group: CI/CD
+    items:
+      - CI/CD (GitHub Actions, GitLab CI)
+  - group: Observability
+    items:
+      - Monitoring (Prometheus, VictoriaMetrics, Grafana, Loki, CloudWatch)
+  - group: Databases
+    items:
+      - Databases (PostgreSQL, ClickHouse, Redis)
+  - group: Networking
+    items:
+      - Networking (TCP/IP, DNS, VPN, Firewall)
+  - group: Languages & Tools
+    items:
+      - Go / Node.js / Python / Bash
+
+achievements:
+  - Automated management for 750+ Linux servers with 99.9% uptime.
+  - Reduced deploy time from 8 to 2 minutes by optimizing CI/CD and Docker images (500MB → 200MB).
+  - Designed and operated AWS infrastructure with Terraform + Ansible (EC2, VPC, RDS, IAM, ALB).
+  - Built a monitoring stack (Grafana + Prometheus/VictoriaMetrics) with 1.5–2 minute incident response SLA.
+  - Delivered a production-ready monitoring microservice (Go + PostgreSQL + React).
+
+experience:
+  - company: InfoScale
+    role: DevOps Engineer / Software Engineer
+    period: Dec 2024 — Jan 2026
+    description:
+      - Administered Kubernetes clusters (deployments, ConfigMaps, Secrets, network policies)
+      - Built AWS infrastructure with Terraform + Ansible (EC2, VPC, RDS, IAM, ALB)
+      - CI/CD optimization: reduced deploy time from 8 to 2 minutes; Docker images 500MB → 200MB
+      - ClickHouse dev cluster: 1 shard / 2 replicas; performance testing and tuning
+      - Monitoring: Grafana + Prometheus/VictoriaMetrics; dashboards, custom metrics; SLA response 1.5–2 min
+      - Security & recovery: incident response for SSH attacks; data recovery via KVM
+      - Delivered a monitoring microservice (Go + PostgreSQL + React)
+
+  - company: AZNResearch
+    role: Fullstack Developer (DevOps)
+    period: Jul 2022 — Oct 2023
+    description:
+      - Built C# (EF Core) microservices for gov/fintech projects; REST APIs; SQL/MySQL integration
+      - Introduced dev workflows (Git flow, code review, CI deployment) and improved team throughput by ~25%
+      - Stack: Angular, Tailwind, C#, .NET Core, SQL Server, MySQL, Linux
+
+  - company: Project Tech
+    role: Senior Developer / Co-Founder
+    period: Feb 2017 — Oct 2019
+    description:
+      - Tech lead for a team of 6 (architecture, mentoring, code review)
+      - Production deployments for full-stack projects (Docker Compose)
+      - Backend for multiplayer features (Node.js + WebSockets)

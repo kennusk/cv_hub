@@ -1,0 +1,41 @@
+name: Alexander Gusarov
+title: DevOps Engineer / Software Engineer
+summary: >
+  10+ years in IT across development and infrastructure.
+  Focused on production Kubernetes, IaC and reliability.
+
+contacts:
+  - label: GitHub
+    url: https://github.com/KeeGooRoomiE
+  - label: Telegram
+    url: https://t.me/spartan121
+
+skills:
+  - group: Kubernetes
+    items:
+      - Kubernetes
+  - group: IaC
+    items:
+      - Terraform
+      - Ansible
+  - group: Cloud
+    items:
+      - AWS
+  - group: Databases
+    items:
+      - ClickHouse
+
+achievements:
+  - Автоматизировал управление более чем 750 Linux-серверами с доступностью 99.9%.
+  - Сократил время деплоя с 8 до 2 минут за счёт оптимизации CI/CD и Docker-образов.
+  - Спроектировал и поддерживал инфраструктуру в AWS с использованием Terraform и Ansible.
+  - Построил мониторинговый стек (Grafana + Prometheus/VictoriaMetrics) с SLA по реакции на инциденты 1.5–2 минуты.
+
+experience:
+  - company: InfoScale
+    role: DevOps Engineer
+    period: Dec 2024 — Nov 2025
+    description:
+      - Managed production Kubernetes in AWS
+      - Implemented Terraform infrastructure modules
+      - Built monitoring stack with VictoriaMetrics and Grafana

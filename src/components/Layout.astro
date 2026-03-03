@@ -1,0 +1,32 @@
+---
+const { title = 'CV Hub', lang = 'en' } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__row">
+        <a class="brand" href={`/?lang=${lang}`}>CV Hub</a>
+        <nav class="nav">
+          <a href={`/?lang=${lang}`}>{lang === 'ru' ? 'Главная' : 'Home'}</a>
+          <a href={`/showcase?lang=${lang}`}>{lang === 'ru' ? 'Шоукейс' : 'Showcase'}</a>
+        </nav>
+        <div class="lang">
+          <a class={lang === 'en' ? 'active' : ''} href={`${Astro.url.pathname}?lang=en`}>EN</a>
+          <a class={lang === 'ru' ? 'active' : ''} href={`${Astro.url.pathname}?lang=ru`}>RU</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

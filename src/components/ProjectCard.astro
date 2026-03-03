@@ -1,0 +1,38 @@
+---
+const { project, lang = 'en' } = Astro.props;
+
+const title = project?.name ?? 'Untitled';
+const role = project?.role ?? '';
+const year = project?.year ?? '';
+const desc = project?.description ?? '';
+const stack = project?.stack ?? [];
+const links = project?.links ?? [];
+---
+
+<article class="card">
+  <header class="card__header">
+    <h2 class="card__title">{title}</h2>
+    <div class="card__meta">
+      <span>{role}</span>
+      {year && <span>· {year}</span>}
+    </div>
+  </header>
+
+  {desc && <p class="card__desc">{desc}</p>}
+
+  {stack.length > 0 && (
+    <ul class="tags">
+      {stack.map((s) => <li class="tag">{s}</li>)}
+    </ul>
+  )}
+
+  {links.length > 0 && (
+    <div class="links">
+      {links.map((l) => (
+        <a class="link" href={l.url} target="_blank" rel="noopener">
+          {l.label}
+        </a>
+      ))}
+    </div>
+  )}
+</article>
