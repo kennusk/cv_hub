@@ -75,7 +75,7 @@ projects:
         featured: true
 
   - slug: bhop-jump
-    order: 4
+    order: 5
     name: Bhop Jump
     role: Gameplay & Multiplayer Engineer
     year: "2017"
@@ -85,10 +85,10 @@ projects:
     tags: [unity, mobile, multiplayer, arcade]
     stack: [Unity, C#]
     metrics:
-      - label: Downloads
-        value: "100K+"
       - label: Revenue
         value: "$160K+ (Q1 2017)"
+      - label: Downloads
+        value: "100K+"
     links:
       - label: App Store
         url: https://apps.apple.com/app/bhop-jump/id1227774947
@@ -103,7 +103,7 @@ projects:
         featured: true
 
   - slug: lana-and-ronen
-    order: 5
+    order: 4
     name: Lana & Ronen
     role: Gameplay Developer & Level Designer
     year: "2019"
@@ -155,7 +155,7 @@ projects:
         featured: true
 
   - slug: apple-watch-diceroll
-    order: 7
+    order: 8
     name: Apple Watch DiceRoll
     role: Swift / WatchOS Developer
     year: "2024"
@@ -173,14 +173,9 @@ projects:
       - label: Repository
         url: https://github.com/KeeGooRoomiE/AppleWatch_DiceRoll
         type: repo
-    media:
-      - type: image
-        src: /media/projects/diceroll/cover.png
-        alt: "Apple Watch DiceRoll interface"
-        featured: true
 
   - slug: afc-capital
-    order: 8
+    order: 7
     name: "AFC Capital Partners"
     role: Frontend Developer
     year: "2023"
@@ -310,8 +305,28 @@ projects:
         alt: "Timberman multiplayer gameplay"
         featured: true
 
-  - slug: gunfire
+  - slug: aniplanes
     order: 14
+    name: AniPlanes
+    role: Unity Game Developer
+    year: "2022"
+    description: Animal-themed airplane racer with AI opponents, focused on fast arcade flight feel and progression-driven gameplay.
+    theme: amber
+    platforms: [Android, iOS]
+    tags: [unity, mobile, arcade, racing]
+    stack: [Unity, C#]
+    links:
+      - label: APKPure
+        url: https://apkpure.com/aniplanes/com.ani.planes
+        type: store
+    media:
+      - type: image
+        src: /media/projects/aniplanes/cover.png
+        alt: "AniPlanes gameplay screenshot"
+        featured: true
+
+  - slug: gunfire
+    order: 15
     name: GunFire
     role: Gameplay Engineer
     year: "2021"
@@ -336,7 +351,7 @@ projects:
         featured: true
 
   - slug: flower-king
-    order: 15
+    order: 20
     name: "Flower King: Collect and Grow"
     role: Level Designer
     year: "2020"
@@ -362,7 +377,7 @@ projects:
         featured: true
 
   - slug: helens-quiz
-    order: 16
+    order: 27
     name: Helens Quiz
     role: Gameplay & UI Designer
     year: "2019"
@@ -387,7 +402,7 @@ projects:
         featured: true
 
   - slug: westland
-    order: 17
+    order: 28
     name: Westland
     role: Gameplay Developer
     year: "2019"
@@ -408,7 +423,7 @@ projects:
         featured: true
 
   - slug: kalina-malina-delivery
-    order: 18
+    order: 29
     name: "Калина‑Малина: доставка еды"
     role: Mobile App Developer
     year: "2018"
@@ -434,7 +449,7 @@ projects:
         featured: true
 
   - slug: transport-railroad-crossing
-    order: 19
+    order: 30
     name: Transport Railroad Crossing
     role: Gameplay Designer & Developer
     year: "2018"
@@ -446,8 +461,6 @@ projects:
     metrics:
       - label: Type
         value: "Personal Project"
-      - label: Status
-        value: "Delisted"
     media:
       - type: image
         src: /media/projects/transport-railroad-crossing/cover.jpeg
@@ -455,7 +468,7 @@ projects:
         featured: true
 
   - slug: park-them-all
-    order: 20
+    order: 21
     name: Park Them All
     role: Gameplay & Level Designer
     year: "2020"
@@ -464,11 +477,6 @@ projects:
     platforms: [Android]
     tags: [unity, mobile, hyper-casual, simulation]
     stack: [Unity, C#]
-    metrics:
-      - label: Type
-        value: "Personal Project"
-      - label: Status
-        value: "Delisted"
     media:
       - type: image
         src: /media/projects/park-them-all/cover.png
@@ -476,7 +484,7 @@ projects:
         featured: true
 
   - slug: candy-merge
-    order: 21
+    order: 22
     name: Candy Merge
     role: Gameplay & Level Designer
     year: "2020"
@@ -491,12 +499,12 @@ projects:
         type: store
     media:
       - type: image
-        src: /media/projects/candy-merge/cover.png
+        src: /media/projects/candy-merge/cover.jpg
         alt: "Candy Merge gameplay"
         featured: true
 
   - slug: dodge-agent
-    order: 22
+    order: 16
     name: Dodge Agent
     role: Gameplay & Level Designer
     year: "2021"
@@ -511,12 +519,12 @@ projects:
         type: store
     media:
       - type: image
-        src: /media/projects/dodge-agent/cover.png
+        src: /media/projects/dodge-agent/cover.jpg
         alt: "Dodge Agent gameplay"
         featured: true
 
   - slug: personality-shift
-    order: 23
+    order: 19
     name: Personality Shift
     role: Gameplay & Level Designer
     year: "2021"
@@ -525,11 +533,6 @@ projects:
     platforms: [Android]
     tags: [unity, mobile, hyper-casual, runner]
     stack: [Unity, C#]
-    metrics:
-      - label: Type
-        value: "Personal Project"
-      - label: Status
-        value: "Delisted"
     media:
       - type: image
         src: /media/projects/personality-shift/cover.png
@@ -537,7 +540,7 @@ projects:
         featured: true
 
   - slug: hole-run
-    order: 24
+    order: 18
     name: Hole Run
     role: Gameplay & Level Designer
     year: "2021"
@@ -557,7 +560,7 @@ projects:
         featured: true
 
   - slug: pop-them-all
-    order: 25
+    order: 17
     name: Pop Them All
     role: Gameplay & Level Designer
     year: "2021"
@@ -577,7 +580,7 @@ projects:
         featured: true
 
   - slug: break-stack-tower
-    order: 26
+    order: 23
     name: "Break Stack Tower"
     role: Gameplay & Level Designer
     year: "2020"
@@ -592,4 +595,161 @@ projects:
     links:
       - label: Google Play
         url: https://play.google.com/store/apps/details?id=com.towerbreak.app
+        type: store
+
+  - slug: make-it-work
+    order: 35
+    name: "Make It Work!"
+    role: Game Developer
+    year: "2016"
+    description: Small vector-driven Game Maker Studio clicker with focus on early mobile platforms.
+    theme: amber
+    platforms: [iOS, Android, Amazon]
+    tags: [gamemaker, mobile, clicker, casual]
+    stack: [GameMaker Studio]
+    links:
+      - label: Amazon Appstore
+        url: https://www.amazon.co.jp/DragonGameStudios-Make-it-Work/dp/B07CK73BXC
+        type: store
+      - label: APKTurbo
+        url: https://www.apkturbo.com/games/make-it-work/com.dgs.miwfull/
+        type: store
+    media:
+      - type: image
+        src: /media/projects/make-it-work/cover.jpg
+        alt: "Make It Work! clicker gameplay"
+        featured: true
+
+  - slug: wrap
+    order: 33
+    name: "Wrap!"
+    role: Game Developer
+    year: "2017"
+    description: Minimal one-mechanic puzzle built in GameMaker Studio, shipped on Android and iOS.
+    theme: amber
+    platforms: [Android, iOS]
+    stack: [GameMaker Studio]
+    media:
+      - type: image
+        src: /media/projects/wrap/cover.jpg
+        alt: "Wrap! cover"
+        featured: true
+
+  - slug: filtap
+    order: 31
+    name: "Filtap!"
+    role: Game Developer
+    year: "2018"
+    description: Single-mechanic mobile puzzle built in GameMaker Studio, released on Android.
+    theme: amber
+    platforms: [Android]
+    stack: [GameMaker Studio]
+    links:
+      - label: APKTurbo
+        url: https://www.apkturbo.com/games/filtap/com.zef.filtap/
+        type: store
+    media:
+      - type: image
+        src: /media/projects/filtap/cover.jpg
+        alt: "Filtap! cover"
+        featured: true
+
+  - slug: recolor
+    order: 34
+    name: Recolor
+    role: Game Developer
+    year: "2017"
+    description: Minimal one-mechanic puzzle built in GameMaker Studio, shipped on Android and iOS.
+    theme: amber
+    platforms: [Android, iOS]
+    stack: [GameMaker Studio]
+    media:
+      - type: image
+        src: /media/projects/recolor/cover.jpg
+        alt: "Recolor cover"
+        featured: true
+
+  - slug: box-keeper
+    order: 32
+    name: Box Keeper
+    role: Game Developer
+    year: "2018"
+    description: Mobile roguelike built in GameMaker Studio with a focused core loop and replayable runs. Shipped primarily for iOS with an Android build.
+    theme: amber
+    platforms: [iOS, Android]
+    tags: [gamemaker, mobile, roguelike, puzzle]
+    stack: [GameMaker Studio]
+    links:
+      - label: APKTurbo
+        url: https://www.apkturbo.com/games/box-keeper/com.dgs.bkeep/
+        type: store
+      - label: App Store (search)
+        url: https://apps.apple.com/us/search?term=Box%20Keeper
+        type: store
+    media:
+      - type: image
+        src: /media/projects/box-keeper/cover.jpg
+        alt: "Box Keeper cover"
+        featured: true
+
+  - slug: wonder-blast-alice-friends
+    order: 24
+    name: "Wonder Blast – Alice & Friends"
+    role: Level Designer
+    year: "2020"
+    description: Alice in Wonderland themed cube‑match puzzle game built in Unity with large-scale level progression and puzzle balancing.
+    theme: amber
+    platforms: [iOS, Android]
+    tags: [unity, mobile, puzzle, match3, level-design]
+    stack: [Unity, C#]
+    metrics:
+      - label: Levels Designed
+        value: "1500+"
+      - label: Total Levels
+        value: "2500 (incl. unreleased)"
+    links:
+      - label: APKPure
+        url: https://apkpure.com/wonder-blast/com.popside.alice
+        type: store
+    media:
+      - type: image
+        src: /media/projects/wonder-blast/cover.png
+        alt: "Wonder Blast gameplay"
+        featured: true
+
+  - slug: solitaire-resort
+    order: 25
+    name: "Solitaire Resort"
+    role: Level Designer & Game Balance Designer
+    year: "2020"
+    description: Mobile Tripeaks solitaire puzzle game featuring island progression, economy tuning and long-form level balancing.
+    theme: amber
+    platforms: [iOS, Android]
+    tags: [unity, mobile, solitaire, puzzle, level-design]
+    stack: [Unity, C#]
+    metrics:
+      - label: Levels Designed
+        value: "500+"
+    media:
+      - type: image
+        src: /media/projects/solitaire-resort/cover.png
+        alt: "Solitaire Resort gameplay"
+        featured: true
+
+  - slug: cookie-crush
+    order: 26
+    name: "Cookie Crush"
+    role: Level Designer
+    year: "2020"
+    description: Match-3 candy puzzle game where I designed and balanced level progression, including proposing and prototyping new mechanics.
+    theme: amber
+    platforms: [Android]
+    tags: [unity, mobile, puzzle, match3, level-design]
+    stack: [Unity, C#]
+    metrics:
+      - label: Levels Designed
+        value: "300+"
+    links:
+      - label: APKPure
+        url: https://apkpure.net/cookie-crush-candy-match-3/com.guuby.candy
         type: store
