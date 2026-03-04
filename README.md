@@ -48,7 +48,7 @@ CV Hub works for anyone who wants a professional website with full personal cont
 - Two language support (RU / EN)
 - Downloadable resume files (PDF / DOCX / TXT) generated automatically from YAML
 - Clean static HTML deployed on GitHub Pages
-- Full control over the visual style through a single CSS file
+- Full control over the visual style through a single CSS file with theme support
 
 ---
 
@@ -79,13 +79,13 @@ From zero to live site in under 5 minutes.
 
 Click **Fork** in the top right corner of the repository page on GitHub.
 
-After forking you'll have your own copy: `github.com/YOUR_ACCOUNT/cv-hub`
+After forking you'll have your own copy: `github.com/YOUR_ACCOUNT/cv_hub`
 
 ### 2. Clone to your local machine
 
 ```bash
-git clone https://github.com/YOUR_ACCOUNT/cv-hub.git
-cd cv-hub
+git clone https://github.com/YOUR_ACCOUNT/cv_hub.git
+cd cv_hub
 ```
 
 ### 3. Install dependencies
@@ -128,6 +128,14 @@ src/content/
 
 For full YAML structure reference and field descriptions — see **[`docs/INFO.md`](docs/INFO.md)**.
 
+Example files with all supported fields are available in:
+
+```
+docs/examples/
+  example_cv.yaml   ← full YAML example with comments
+  example_cv.json   ← JSON Resume format example
+```
+
 ---
 
 ## How to fill in your data
@@ -162,26 +170,45 @@ If you have a PDF, DOCX, or plain text resume — use Claude or ChatGPT with the
 
 ## How to customize the look
 
-All styles live in one file:
+All styles live in:
 
 ```
-public/styles/global.css
+src/styles/global.css
 ```
 
-The file is token-based — to change the color scheme of the entire site, just edit the `:root` block at the top:
+The file is token-based — to restyle the entire site, edit only the `:root` block at the top. Every visual property flows from these tokens:
 
 ```css
 :root {
-  --bg: #0b0f14;          /* background color */
-  --surface: #0f1620;     /* card background */
-  --text: #e9eef7;        /* primary text */
-  --muted: #a6b1c2;       /* secondary text */
-  --accent: #3b82f6;      /* accent color (blue by default) */
-  --accent-2: #60a5fa;    /* secondary accent / hover */
+  --bg: #070a10;        /* page background */
+  --text: #e9eef7;      /* primary text */
+  --muted: #a6b1c2;     /* secondary text */
+  --accent: #3b82f6;    /* accent color */
+  --accent-2: #60a5fa;  /* secondary accent */
+  --card-bg: ...;       /* card surface */
+  --border: ...;        /* border color */
+  --r-lg: 18px;         /* card border radius */
+  --header-bg: ...;     /* header background */
 }
 ```
 
-Change one variable — the whole site updates. Dark theme is used by default.
+Change one variable — the whole site updates.
+
+### Themes
+
+Ready-made themes are in:
+
+```
+src/styles/themes/
+```
+
+To switch themes, change the import in `src/components/Layout.astro`:
+
+```js
+import '../styles/themes/github-dark.css';
+```
+
+Available themes: dark blue (default), GitHub Dark, GitHub Light, Nord, Tokyo Night, Solarized Dark, Gruvbox, VS Code Dark, macOS, Web3 Light, Peach Light, and more.
 
 ---
 
@@ -202,34 +229,39 @@ git push
 Your site will be live at:
 
 ```
-https://YOUR_ACCOUNT.github.io/cv-hub/
+https://YOUR_ACCOUNT.github.io/cv_hub/
 ```
 
-The deploy workflow runs automatically on every push to `main`. The `base` URL is resolved dynamically from `GITHUB_REPOSITORY` — so forks work out of the box without any config changes.
+The deploy workflow runs automatically on every push to `main`. The `base` URL is resolved dynamically — forks work out of the box without any config changes.
 
 ---
 
 ## Resume file generation
 
-All resume files are generated automatically from YAML during build:
+All resume files are generated automatically during build:
 
 ```bash
 npm run build
 ```
 
 This runs in order:
-1. `resume:generate` — builds DOCX + TXT from YAML
-2. `resume:pdf` — builds PDF via Playwright from YAML
-3. `astro build` — builds the static site
+1. `resume:generate` — DOCX + TXT from YAML
+2. `resume:pdf` — PDF via Playwright from YAML
+3. `astro build` — static site
 
-Output:
+Output after build:
+
 ```
-public/downloads/resume_en.pdf
-public/downloads/resume_ru.pdf
-public/downloads/resume_en.docx
-public/downloads/resume_ru.docx
-public/downloads/resume_en.txt
-public/downloads/resume_ru.txt
+public/downloads/
+  resume_en.pdf
+  resume_ru.pdf
+  resume_en.docx
+  resume_ru.docx
+  resume_en.txt
+  resume_ru.txt
+  json/
+    cv_en.json
+    cv_ru.json
 ```
 
 To generate resume files without building the site:
@@ -259,14 +291,17 @@ npm run resume:linkedin      # parse LinkedIn PDF export → YAML (best-effort)
 
 ```
 docs/
-  INFO.md                ← Project overview, YAML reference, data flow
+  INFO.md                ← YAML reference, data flow, component structure
   ENGINEERING.md         ← Engineering decisions and project philosophy
   llm-resume-guide.md    ← How to generate YAML from a resume using an LLM
+  examples/
+    example_cv.yaml      ← Full YAML example with all supported fields
+    example_cv.json      ← JSON Resume format example
+  repo-assets/
+    preview_main.jpeg    ← README preview image
+    github-labels        ← GitHub label configuration
+    release-guide        ← Release process notes
 ```
-
-**`INFO.md`** — start here if you want to understand the project or adapt it. Covers goals, architecture, full YAML schema with examples, and component structure.
-
-**`ENGINEERING.md`** — architectural journal. Explains why Astro over React or Angular, why YAML, what trade-offs were made deliberately.
 
 ---
 
@@ -288,16 +323,22 @@ src/
       ru.astro               # Showcase page (RU)
   components/
     Layout.astro
-    Header.astro
     HomePage.astro
+    ProjectCard.astro
   scripts/
-    resume-export-pdf.mjs    # PDF generator (Playwright)
-    resume-import-json.mjs   # JSON Resume → YAML converter
-    resume-import-linkedin.mjs # LinkedIn PDF → YAML parser
-public/
+    resume-export-pdf.mjs      # PDF generator (Playwright)
+    resume-import-json.mjs     # JSON Resume → YAML converter
+    resume-import-linkedin.mjs # LinkedIn PDF → YAML parser (best-effort)
   styles/
-    global.css               # All site styles
-  downloads/                 # Generated resume files
+    global.css               # All site styles + design tokens
+    themes/                  # Ready-made color themes
+public/
+  media/
+    projects/                # Showcase media files
+      project1/
+      project2/
+  downloads/                 # Generated resume files (after build)
+    json/                    # JSON Resume exports
 .github/
   scripts/
     generate-resume.js       # DOCX + TXT generator
@@ -307,6 +348,13 @@ docs/
   INFO.md
   ENGINEERING.md
   llm-resume-guide.md
+  examples/
+    example_cv.yaml
+    example_cv.json
+  repo-assets/
+    preview_main.jpeg
+    github-labels
+    release-guide
 ```
 
 ---
