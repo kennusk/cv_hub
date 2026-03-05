@@ -208,7 +208,7 @@ To switch themes, change the import in `src/components/Layout.astro`:
 import '../styles/themes/github-dark.css';
 ```
 
-Available themes: dark blue (default), GitHub Dark, GitHub Light, Nord, Tokyo Night, Solarized Dark, Gruvbox, VS Code Dark, macOS, Web3 Light, Peach Light, and more.
+Previews for themes are available **[Here](docs/repo-assets)**
 
 ---
 
@@ -291,12 +291,12 @@ npm run resume:linkedin      # parse LinkedIn PDF export → YAML (best-effort)
 
 ```
 docs/
-  INFO.md                ← YAML reference, data flow, component structure
-  ENGINEERING.md         ← Engineering decisions and project philosophy
-  llm-resume-guide.md    ← How to generate YAML from a resume using an LLM
+  [INFO.md](docs/INFO.md)               ← YAML reference, data flow, component structure
+  [ENGINEERING.md](docs/ENGINEERING.md)         ← Engineering decisions and project philosophy
+  [llm-resume-guide.md](docs/llm-resume-guide.md)    ← How to generate YAML from a resume using an LLM
   examples/
-    example_cv.yaml      ← Full YAML example with all supported fields
-    example_cv.json      ← JSON Resume format example
+    [example_cv.yaml](docs/examples/example_cv.yaml)      ← Full YAML example with all supported fields
+    [example_cv.json](docs/examples/example_cv.json)      ← JSON Resume format example
   repo-assets/
     preview_main.jpeg    ← README preview image
     github-labels        ← GitHub label configuration
