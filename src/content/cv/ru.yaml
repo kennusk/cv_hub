@@ -19,6 +19,8 @@ contacts:
     url: https://www.upwork.com/freelancers/~01764e57e0646f2fbf
   - label: LinkedIn
     url: https://www.linkedin.com/in/alexander-gusarov-4a08911a2/
+  - label: Хабр Карьера
+    url: https://career.habr.com/xandergusarov
 
 achievements:
   - Управлял инфраструктурой из 750+ Linux-серверов с uptime 99.9%
