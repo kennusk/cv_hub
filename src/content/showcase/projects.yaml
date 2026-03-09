@@ -103,8 +103,29 @@ projects:
         alt: "Bhop Jump gameplay screenshot"
         featured: true
 
-  - slug: lana-and-ronen
+  - slug: s-s-platformer
     order: 5
+    featured: true
+    name: "S+S"
+    role: Game Developer
+    year: "2024"
+    description: Mario-style web platformer commissioned by Sundukovy Sisters interior design studio as a birthday gift to the founders. Each level reflects a different era of the studio through branded interiors, custom bosses drawn in pokémon style, and a companion character with autonomous movement logic. Built in 3 weeks with PC and mobile support. Played by the whole team at the founders' corporate birthday party.
+    theme: blue
+    platforms: [Web]
+    tags: [gamemaker, pixel-art, platformer, branded, web]
+    stack: [GameMaker Studio]
+    links:
+      - label: Play Game
+        url: https://sundukovy.com/game
+        type: demo
+    media:
+      - type: image
+        src: /media/projects/s-s-platformer/cover.png
+        alt: "S+S platformer screenshot"
+        featured: true
+
+  - slug: lana-and-ronen
+    order: 6
     name: Lana & Ronen
     role: Gameplay Developer & Level Designer
     year: "2019"
@@ -130,7 +151,7 @@ projects:
         type: store
 
   - slug: wings-gms-online
-    order: 6
+    order: 7
     name: Wings GMS Online
     role: Gameplay & Multiplayer Systems Engineer
     year: "2022"
@@ -156,28 +177,8 @@ projects:
         alt: "Wings gameplay screenshot"
         featured: true
 
-  - slug: apple-watch-diceroll
-    order: 8
-    name: Apple Watch DiceRoll
-    role: Swift / WatchOS Developer
-    year: "2024"
-    description: Minimalistic Apple Watch dice application built with SwiftUI, focused on fast interaction and clean watch-first UX.
-    theme: cyan
-    platforms: [watchOS]
-    tags: [swift, watchos, open-source, utility]
-    stack: [Swift, SwiftUI]
-    metrics:
-      - label: Platform
-        value: "watchOS"
-      - label: Status
-        value: "Open Source"
-    links:
-      - label: Github
-        url: https://github.com/KeeGooRoomiE/AppleWatch_DiceRoll
-        type: repo
-
   - slug: afc-capital
-    order: 7
+    order: 8
     name: "AFC Capital Partners"
     role: Frontend Developer
     year: "2023"
@@ -199,8 +200,28 @@ projects:
         url: https://aznresearch.com/en/work/afc-capital
         type: article
 
-  - slug: africa-finance-corporation
+  - slug: apple-watch-diceroll
     order: 9
+    name: Apple Watch DiceRoll
+    role: Swift / WatchOS Developer
+    year: "2024"
+    description: Minimalistic Apple Watch dice application built with SwiftUI, focused on fast interaction and clean watch-first UX.
+    theme: cyan
+    platforms: [watchOS]
+    tags: [swift, watchos, open-source, utility]
+    stack: [Swift, SwiftUI]
+    metrics:
+      - label: Platform
+        value: "watchOS"
+      - label: Status
+        value: "Open Source"
+    links:
+      - label: Github
+        url: https://github.com/KeeGooRoomiE/AppleWatch_DiceRoll
+        type: repo
+
+  - slug: africa-finance-corporation
+    order: 10
     archived: true
     name: "Africa Finance Corporation"
     role: Frontend Developer
@@ -224,7 +245,7 @@ projects:
         type: article
 
   - slug: amaka-studio
-    order: 10
+    order: 11
     archived: true
     name: "Amaka Studio"
     role: Frontend Developer
@@ -245,7 +266,7 @@ projects:
         type: demo
 
   - slug: thelo-db
-    order: 11
+    order: 12
     archived: true
     name: "Thelo DB Engineering"
     role: Frontend Developer
@@ -266,7 +287,7 @@ projects:
         type: demo
 
   - slug: thelo-rs
-    order: 12
+    order: 13
     archived: true
     name: "Thelo Group"
     role: Frontend Developer
@@ -287,13 +308,12 @@ projects:
         type: demo
 
   - slug: timberman-mp
-    order: 13
+    order: 14
     archived: true
     name: Timberman Multiplayer
     role: Gameplay & Network Engineer
     year: "2022"
     description: Two-player real-time Timberman-style arcade game built in GameMaker with custom Node.js + Socket.io multiplayer backend.
-    
     platforms: [Web, Windows]
     tags: [gamemaker, multiplayer, arcade, open-source]
     stack: [GameMaker, Node.js, Socket.io]
@@ -313,7 +333,7 @@ projects:
         featured: true
 
   - slug: aniplanes
-    order: 14
+    order: 15
     archived: true
     name: AniPlanes
     role: Unity Game Developer
@@ -334,7 +354,7 @@ projects:
         featured: true
 
   - slug: gunfire
-    order: 15
+    order: 16
     archived: true
     name: GunFire
     role: Gameplay Engineer
@@ -359,8 +379,84 @@ projects:
         alt: "GunFire gameplay screenshot"
         featured: true
 
-  - slug: flower-king
+  - slug: dodge-agent
+    order: 17
+    archived: true
+    name: Dodge Agent
+    role: Gameplay & Level Designer
+    year: "2021"
+    description: Hyper-casual timing game where a ninja jumps between platforms while dodging laser traps.
+    platforms: [Android]
+    tags: [unity, mobile, hyper-casual, action]
+    stack: [Unity, C#]
+    links:
+      - label: Google Play
+        url: https://play.google.com/store/apps/details?id=com.weave.dodgeagent
+        type: store
+    media:
+      - type: image
+        src: /media/projects/dodge-agent/cover.jpg
+        alt: "Dodge Agent gameplay"
+        featured: true
+
+  - slug: pop-them-all
+    order: 18
+    archived: true
+    name: Pop Them All
+    role: Gameplay & Level Designer
+    year: "2021"
+    description: Hyper-casual pop-it style game where players clear tactile boards to unlock new patterns and visual sets.
+    platforms: [Android]
+    tags: [unity, mobile, hyper-casual, casual]
+    stack: [Unity, C#]
+    links:
+      - label: Google Play
+        url: https://play.google.com/store/apps/details?id=com.weaveGames.popthemall
+        type: store
+    media:
+      - type: image
+        src: /media/projects/pop-them-all/cover.png
+        alt: "Pop Them All gameplay"
+        featured: true
+
+  - slug: hole-run
+    order: 19
+    archived: true
+    name: Hole Run
+    role: Gameplay & Level Designer
+    year: "2021"
+    description: Hyper-casual runner where a moving hole collects falling blocks and later builds structures from gathered pieces.
+    platforms: [Android]
+    tags: [unity, mobile, hyper-casual, runner]
+    stack: [Unity, C#]
+    links:
+      - label: Google Play
+        url: https://play.google.com/store/apps/details?id=com.sketchteam.ColorBallSketch
+        type: store
+    media:
+      - type: image
+        src: /media/projects/hole-run/cover.png
+        alt: "Hole Run gameplay"
+        featured: true
+
+  - slug: personality-shift
     order: 20
+    archived: true
+    name: Personality Shift
+    role: Gameplay & Level Designer
+    year: "2021"
+    description: Hyper-casual runner for a female audience featuring outfit-based transformation segments inspired by shape-shifting mechanics.
+    platforms: [Android]
+    tags: [unity, mobile, hyper-casual, runner]
+    stack: [Unity, C#]
+    media:
+      - type: image
+        src: /media/projects/personality-shift/cover.png
+        alt: "Personality Shift gameplay"
+        featured: true
+
+  - slug: flower-king
+    order: 21
     archived: true
     name: "Flower King: Collect and Grow"
     role: Level Designer
@@ -386,8 +482,127 @@ projects:
         alt: "Flower King: Collect and Grow gameplay"
         featured: true
 
-  - slug: helens-quiz
+  - slug: park-them-all
+    order: 22
+    archived: true
+    name: Park Them All
+    role: Gameplay & Level Designer
+    year: "2020"
+    description: Hyper-casual parking simulator where players place cars into correct spots under increasing level complexity.
+    platforms: [Android]
+    tags: [unity, mobile, hyper-casual, simulation]
+    stack: [Unity, C#]
+    media:
+      - type: image
+        src: /media/projects/park-them-all/cover.png
+        alt: "Park Them All gameplay"
+        featured: true
+
+  - slug: candy-merge
+    order: 23
+    archived: true
+    name: Candy Merge
+    role: Gameplay & Level Designer
+    year: "2020"
+    description: Hyper-casual match-3 game combined with 2048-style merge mechanics and progressive puzzle difficulty.
+    platforms: [Android]
+    tags: [unity, mobile, hyper-casual, casual, match3]
+    stack: [Unity, C#]
+    links:
+      - label: Google Play
+        url: https://play.google.com/store/search?q=Candy%20Merge&c=apps
+        type: store
+    media:
+      - type: image
+        src: /media/projects/candy-merge/cover.jpg
+        alt: "Candy Merge gameplay"
+        featured: true
+
+  - slug: break-stack-tower
+    order: 24
+    archived: true
+    name: "Break Stack Tower"
+    role: Gameplay & Level Designer
+    year: "2020"
+    description: Arcade hyper-casual tower breaking game with physics-based destruction mechanics and level progression.
+    platforms: [Android]
+    tags: [unity, mobile, hyper-casual, arcade]
+    stack: [Unity, C#]
+    metrics:
+      - label: Downloads
+        value: "50K+"
+    links:
+      - label: Google Play
+        url: https://play.google.com/store/apps/details?id=com.towerbreak.app
+        type: store
+
+  - slug: wonder-blast-alice-friends
+    order: 25
+    archived: true
+    name: "Wonder Blast – Alice & Friends"
+    role: Level Designer
+    year: "2020"
+    description: Alice in Wonderland themed cube‑match puzzle game built in Unity with large-scale level progression and puzzle balancing.
+    theme: auto
+    platforms: [iOS, Android]
+    tags: [unity, mobile, puzzle, match3, level-design]
+    stack: [Unity, C#]
+    metrics:
+      - label: Levels Designed
+        value: "1500+"
+      - label: Total Levels
+        value: "2500 (incl. unreleased)"
+    links:
+      - label: APKPure
+        url: https://apkpure.com/wonder-blast/com.popside.alice
+        type: store
+    media:
+      - type: image
+        src: /media/projects/wonder-blast/cover.png
+        alt: "Wonder Blast gameplay"
+        featured: true
+
+  - slug: solitaire-resort
+    order: 26
+    archived: true
+    name: "Solitaire Resort"
+    role: Level Designer & Game Balance Designer
+    year: "2020"
+    description: Mobile Tripeaks solitaire puzzle game featuring island progression, economy tuning and long-form level balancing.
+    theme: auto
+    platforms: [iOS, Android]
+    tags: [unity, mobile, solitaire, puzzle, level-design]
+    stack: [Unity, C#]
+    metrics:
+      - label: Levels Designed
+        value: "500+"
+    media:
+      - type: image
+        src: /media/projects/solitaire-resort/cover.png
+        alt: "Solitaire Resort gameplay"
+        featured: true
+
+  - slug: cookie-crush
     order: 27
+    archived: true
+    name: "Cookie Crush"
+    role: Level Designer
+    year: "2020"
+    description: Match-3 candy puzzle game where I designed and balanced level progression, including proposing and prototyping new mechanics.
+    theme: auto
+    platforms: [Android]
+    tags: [unity, mobile, puzzle, match3, level-design]
+    stack: [Unity, C#]
+    metrics:
+      - label: Levels Designed
+        value: "300+"
+    links:
+      - label: APKPure
+        url: https://apkpure.net/cookie-crush-candy-match-3/com.guuby.candy
+        type: store
+
+  - slug: helens-quiz
+    order: 28
     archived: true
     name: Helens Quiz
     role: Gameplay & UI Designer
@@ -413,7 +628,7 @@ projects:
         featured: true
 
   - slug: westland
-    order: 28
+    order: 29
     archived: true
     name: Westland
     role: Gameplay Developer
@@ -435,7 +650,7 @@ projects:
         featured: true
 
   - slug: kalina-malina-delivery
-    order: 29
+    order: 30
     archived: true
     name: "Калина‑Малина: доставка еды"
     role: Mobile App Developer
@@ -462,13 +677,12 @@ projects:
         featured: true
 
   - slug: transport-railroad-crossing
-    order: 30
+    order: 31
     archived: true
     name: Transport Railroad Crossing
     role: Gameplay Designer & Developer
     year: "2018"
     description: Crossy Road–style arcade game featuring dynamic traffic logic and railway crossing systems with train-triggered vehicle stopping behavior.
-    
     platforms: [Android]
     tags: [gamemaker, mobile, arcade, casual]
     stack: [GameMaker]
@@ -481,185 +695,8 @@ projects:
         alt: "Transport Railroad Crossing gameplay"
         featured: true
 
-  - slug: park-them-all
-    order: 21
-    archived: true
-    name: Park Them All
-    role: Gameplay & Level Designer
-    year: "2020"
-    description: Hyper-casual parking simulator where players place cars into correct spots under increasing level complexity.
-    
-    platforms: [Android]
-    tags: [unity, mobile, hyper-casual, simulation]
-    stack: [Unity, C#]
-    media:
-      - type: image
-        src: /media/projects/park-them-all/cover.png
-        alt: "Park Them All gameplay"
-        featured: true
-
-  - slug: candy-merge
-    order: 22
-    archived: true
-    name: Candy Merge
-    role: Gameplay & Level Designer
-    year: "2020"
-    description: Hyper-casual match-3 game combined with 2048-style merge mechanics and progressive puzzle difficulty.
-    
-    platforms: [Android]
-    tags: [unity, mobile, hyper-casual, casual, match3]
-    stack: [Unity, C#]
-    links:
-      - label: Google Play
-        url: https://play.google.com/store/search?q=Candy%20Merge&c=apps
-        type: store
-    media:
-      - type: image
-        src: /media/projects/candy-merge/cover.jpg
-        alt: "Candy Merge gameplay"
-        featured: true
-
-  - slug: dodge-agent
-    order: 16
-    archived: true
-    name: Dodge Agent
-    role: Gameplay & Level Designer
-    year: "2021"
-    description: Hyper-casual timing game where a ninja jumps between platforms while dodging laser traps.
-    
-    platforms: [Android]
-    tags: [unity, mobile, hyper-casual, action]
-    stack: [Unity, C#]
-    links:
-      - label: Google Play
-        url: https://play.google.com/store/apps/details?id=com.weave.dodgeagent
-        type: store
-    media:
-      - type: image
-        src: /media/projects/dodge-agent/cover.jpg
-        alt: "Dodge Agent gameplay"
-        featured: true
-
-  - slug: personality-shift
-    order: 19
-    archived: true
-    name: Personality Shift
-    role: Gameplay & Level Designer
-    year: "2021"
-    description: Hyper-casual runner for a female audience featuring outfit-based transformation segments inspired by shape-shifting mechanics.
-    
-    platforms: [Android]
-    tags: [unity, mobile, hyper-casual, runner]
-    stack: [Unity, C#]
-    media:
-      - type: image
-        src: /media/projects/personality-shift/cover.png
-        alt: "Personality Shift gameplay"
-        featured: true
-
-  - slug: hole-run
-    order: 18
-    archived: true
-    name: Hole Run
-    role: Gameplay & Level Designer
-    year: "2021"
-    description: Hyper-casual runner where a moving hole collects falling blocks and later builds structures from gathered pieces.
-    
-    platforms: [Android]
-    tags: [unity, mobile, hyper-casual, runner]
-    stack: [Unity, C#]
-    links:
-      - label: Google Play
-        url: https://play.google.com/store/apps/details?id=com.sketchteam.ColorBallSketch
-        type: store
-    media:
-      - type: image
-        src: /media/projects/hole-run/cover.png
-        alt: "Hole Run gameplay"
-        featured: true
-
-  - slug: pop-them-all
-    order: 17
-    archived: true
-    name: Pop Them All
-    role: Gameplay & Level Designer
-    year: "2021"
-    description: Hyper-casual pop-it style game where players clear tactile boards to unlock new patterns and visual sets.
-    
-    platforms: [Android]
-    tags: [unity, mobile, hyper-casual, casual]
-    stack: [Unity, C#]
-    links:
-      - label: Google Play
-        url: https://play.google.com/store/apps/details?id=com.weaveGames.popthemall
-        type: store
-    media:
-      - type: image
-        src: /media/projects/pop-them-all/cover.png
-        alt: "Pop Them All gameplay"
-        featured: true
-
-  - slug: break-stack-tower
-    order: 23
-    archived: true
-    name: "Break Stack Tower"
-    role: Gameplay & Level Designer
-    year: "2020"
-    description: Arcade hyper-casual tower breaking game with physics-based destruction mechanics and level progression.
-    
-    platforms: [Android]
-    tags: [unity, mobile, hyper-casual, arcade]
-    stack: [Unity, C#]
-    metrics:
-      - label: Downloads
-        value: "50K+"
-    links:
-      - label: Google Play
-        url: https://play.google.com/store/apps/details?id=com.towerbreak.app
-        type: store
-
-  - slug: make-it-work
-    order: 35
-    archived: true
-    name: "Make It Work!"
-    role: Game Developer
-    year: "2016"
-    description: Small vector-driven Game Maker Studio clicker with focus on early mobile platforms.
-    theme: magenta
-    platforms: [iOS, Android, Amazon]
-    tags: [gamemaker, mobile, clicker, casual]
-    stack: [GameMaker Studio]
-    links:
-      - label: Amazon Appstore
-        url: https://www.amazon.co.jp/DragonGameStudios-Make-it-Work/dp/B07CK73BXC
-        type: store
-      - label: APKTurbo
-        url: https://www.apkturbo.com/games/make-it-work/com.dgs.miwfull/
-        type: store
-    media:
-      - type: image
-        src: /media/projects/make-it-work/cover.jpg
-        alt: "Make It Work! clicker gameplay"
-        featured: true
-
-  - slug: wrap
-    order: 33
-    archived: true
-    name: "Wrap!"
-    role: Game Developer
-    year: "2017"
-    description: Minimal one-mechanic puzzle built in GameMaker Studio, shipped on Android and iOS.
-    theme: blue
-    platforms: [Android, iOS]
-    stack: [GameMaker Studio]
-    media:
-      - type: image
-        src: /media/projects/wrap/cover.jpg
-        alt: "Wrap! cover"
-        featured: true
-
   - slug: filtap
-    order: 31
+    order: 32
     archived: true
     name: "Filtap!"
     role: Game Developer
@@ -678,24 +715,8 @@ projects:
         alt: "Filtap! cover"
         featured: true
 
-  - slug: recolor
-    order: 34
-    archived: true
-    name: Recolor
-    role: Game Developer
-    year: "2017"
-    description: Minimal one-mechanic puzzle built in GameMaker Studio, shipped on Android and iOS.
-    theme: blue
-    platforms: [Android, iOS]
-    stack: [GameMaker Studio]
-    media:
-      - type: image
-        src: /media/projects/recolor/cover.jpg
-        alt: "Recolor cover"
-        featured: true
-
   - slug: box-keeper
-    order: 32
+    order: 33
     archived: true
     name: Box Keeper
     role: Game Developer
@@ -718,88 +739,58 @@ projects:
         alt: "Box Keeper cover"
         featured: true
 
-  - slug: wonder-blast-alice-friends
-    order: 24
+  - slug: wrap
+    order: 34
     archived: true
-    name: "Wonder Blast – Alice & Friends"
-    role: Level Designer
-    year: "2020"
-    description: Alice in Wonderland themed cube‑match puzzle game built in Unity with large-scale level progression and puzzle balancing.
-    theme: auto
-    platforms: [iOS, Android]
-    tags: [unity, mobile, puzzle, match3, level-design]
-    stack: [Unity, C#]
-    metrics:
-      - label: Levels Designed
-        value: "1500+"
-      - label: Total Levels
-        value: "2500 (incl. unreleased)"
-    links:
-      - label: APKPure
-        url: https://apkpure.com/wonder-blast/com.popside.alice
-        type: store
-    media:
-      - type: image
-        src: /media/projects/wonder-blast/cover.png
-        alt: "Wonder Blast gameplay"
-        featured: true
-
-  - slug: solitaire-resort
-    order: 25
-    archived: true
-    name: "Solitaire Resort"
-    role: Level Designer & Game Balance Designer
-    year: "2020"
-    description: Mobile Tripeaks solitaire puzzle game featuring island progression, economy tuning and long-form level balancing.
-    theme: auto
-    platforms: [iOS, Android]
-    tags: [unity, mobile, solitaire, puzzle, level-design]
-    stack: [Unity, C#]
-    metrics:
-      - label: Levels Designed
-        value: "500+"
-    media:
-      - type: image
-        src: /media/projects/solitaire-resort/cover.png
-        alt: "Solitaire Resort gameplay"
-        featured: true
-
-  - slug: cookie-crush
-    order: 26
-    archived: true
-    name: "Cookie Crush"
-    role: Level Designer
-    year: "2020"
-    description: Match-3 candy puzzle game where I designed and balanced level progression, including proposing and prototyping new mechanics.
-    theme: auto
-    platforms: [Android]
-    tags: [unity, mobile, puzzle, match3, level-design]
-    stack: [Unity, C#]
-    metrics:
-      - label: Levels Designed
-        value: "300+"
-    links:
-      - label: APKPure
-        url: https://apkpure.net/cookie-crush-candy-match-3/com.guuby.candy
-        type: store
-
-  - slug: s-s-platformer
-    order: 36
-    featured: true
-    name: "S+S"
+    name: "Wrap!"
     role: Game Developer
-    year: "2024"
-    description: Mario-style web platformer commissioned by Sundukovy Sisters interior design studio as a birthday gift to the founders. Each level reflects a different era of the studio through branded interiors, custom bosses drawn in pokémon style, and a companion character with autonomous movement logic. Built in 3 weeks with PC and mobile support. Played by the whole team at the founders' corporate birthday party.
+    year: "2017"
+    description: Minimal one-mechanic puzzle built in GameMaker Studio, shipped on Android and iOS.
     theme: blue
-    platforms: [Web]
-    tags: [gamemaker, pixel-art, platformer, branded, web]
+    platforms: [Android, iOS]
+    stack: [GameMaker Studio]
+    media:
+      - type: image
+        src: /media/projects/wrap/cover.jpg
+        alt: "Wrap! cover"
+        featured: true
+
+  - slug: recolor
+    order: 35
+    archived: true
+    name: Recolor
+    role: Game Developer
+    year: "2017"
+    description: Minimal one-mechanic puzzle built in GameMaker Studio, shipped on Android and iOS.
+    theme: blue
+    platforms: [Android, iOS]
+    stack: [GameMaker Studio]
+    media:
+      - type: image
+        src: /media/projects/recolor/cover.jpg
+        alt: "Recolor cover"
+        featured: true
+
+  - slug: make-it-work
+    order: 36
+    archived: true
+    name: "Make It Work!"
+    role: Game Developer
+    year: "2016"
+    description: Small vector-driven Game Maker Studio clicker with focus on early mobile platforms.
+    theme: magenta
+    platforms: [iOS, Android, Amazon]
+    tags: [gamemaker, mobile, clicker, casual]
     stack: [GameMaker Studio]
     links:
-      - label: Play Game
-        url: https://sundukovy.com/game
-        type: demo
+      - label: Amazon Appstore
+        url: https://www.amazon.co.jp/DragonGameStudios-Make-it-Work/dp/B07CK73BXC
+        type: store
+      - label: APKTurbo
+        url: https://www.apkturbo.com/games/make-it-work/com.dgs.miwfull/
+        type: store
     media:
       - type: image
-        src: /media/projects/s-s-platformer/cover.png
-        alt: "S+S platformer screenshot"
+        src: /media/projects/make-it-work/cover.jpg
+        alt: "Make It Work! clicker gameplay"
         featured: true
