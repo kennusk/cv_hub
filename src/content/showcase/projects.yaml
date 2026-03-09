@@ -35,9 +35,9 @@ projects:
     stack: [CSS, JSON, Decky Loader]
     metrics:
       - label: Installs
-        value: "16K+"
+        value: "17K+"
       - label: DeckThemes Rating
-        value: "59⭐"
+        value: "60⭐"
     links:
       - label: Github
         url: https://github.com/KeeGooRoomiE/Steam-Deck-Keyboard-CSS-Loader-Template
@@ -114,6 +114,13 @@ projects:
     platforms: [Web]
     tags: [gamemaker, pixel-art, platformer, branded, web]
     stack: [GameMaker Studio]
+    metrics:
+      - label: Delivery
+        value: "3 weeks"
+      - label: Client
+        value: "Forbes-featured studio"
+      - label: Played at
+        value: "Corporate event"
     links:
       - label: Play Game
         url: https://sundukovy.com/game
@@ -207,6 +214,7 @@ projects:
     year: "2024"
     description: Minimalistic Apple Watch dice application built with SwiftUI, focused on fast interaction and clean watch-first UX.
     theme: cyan
+    archived: true
     platforms: [watchOS]
     tags: [swift, watchos, open-source, utility]
     stack: [Swift, SwiftUI]
