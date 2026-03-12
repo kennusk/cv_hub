@@ -1,178 +1,109 @@
-name: Александр Гусаров
-title: Software Engineer — DevOps · Fullstack · GameDev
+name: Валерия Коваликова
+title: Продакт / UX/UI Дизайнер
 
 summary: >
-  Инженер с 14+ годами опыта в DevOps, fullstack и геймдеве.
-  Управлял инфраструктурой из 750+ серверов, участвовал в продуктах с аудиторией 100M+,
-  строил всё — от CI/CD пайплайнов до мультиплеерных бэкендов.
-  Закрываю полный цикл — архитектура, код, деплой — и мне это реально нравится.
+  Продакт-дизайнер с опытом 5+ лет в финтехе, SaaS и мобильных продуктах.
+  Руководила полным циклом дизайна банковских платформ, сервисов международных
+  денежных переводов и IoT-экосистемы безопасности. Специализируюсь на запуске
+  продуктов с нуля, создании масштабируемых дизайн-систем и улучшении конверсии
+  через структурные UX-решения.
 
 contacts:
-  - label: Email
-    url: mailto:spartan.dgs.121@icloud.com
-  - label: GitHub
-    url: https://github.com/KeeGooRoomiE
-  - label: Telegram
-    url: https://t.me/spartan121
-  - label: Upwork
-    url: https://www.upwork.com/freelancers/~01764e57e0646f2fbf
+  - label: Портфолио
+    url: https://www.behance.net/valeriiakovalikova
   - label: LinkedIn
-    url: https://www.linkedin.com/in/alexander-gusarov-4a08911a2/
-  - label: Habr
-    url: https://career.habr.com/xandergusarov
+    url: https://www.linkedin.com/in/valeria-kovalikova/
+  - label: Telegram
+    url: https://t.me/kennusk
+  - label: Email
+    url: mailto:vkovalikova243@gmail.com
 
 achievements:
-  - Обслуживал и автоматизировал инфраструктуру из 750+ Linux-серверов (Selectel VPS и bare metal) с аптаймом 99.9%
-  - Сократил время деплоя с 8 до 2 минут (−75%) и расходы на AWS с $550 до $300/мес
-  - Send Balls — участвовал в разработке игры с 100M+ скачиваний и топом App Store
-  - Bhop Jump — построил мультиплеерный бэкенд, $160K+ выручки в первом квартале
-  - Lana and Ronen — мобильный тайтл с 1M+ скачиваний
-  - Upwork Top Rated Plus — топ 5% фрилансеров, 20+ успешных проектов
+  - Руководила полным циклом дизайна банковских платформ, сервисов международных денежных переводов и IoT-экосистемы безопасности
+  - Ускорение перехода от брифа к тестируемому прототипу примерно на 30% — за счёт использования AI на всех этапах процесса
+  - Сократила цикл согласования дизайна на 40% благодаря реорганизации пользовательских потоков и внедрению масштабируемых компонентов
+  - Сократила среднее время выполнения задач на 30% за счёт улучшения информационной архитектуры
+  - Создала масштабируемую дизайн-систему, сократив время проектирования новых функций на 30%
 
 skills:
-  - group: Языки программирования
-    items: [Go, C#, JavaScript, TypeScript, Dart, Swift, Java, GML]
+  - group: Продукт & UX
+    items: [Пользовательские исследования, UX-стратегия, Информационная архитектура, Вайрфреймы, CJM, Прототипирование, Юзабилити-тестирование, A/B-тестирование, Атомарный дизайн, Дизайн-системы]
 
-  - group: Backend и API
-    items: [Node.js, REST API, WebSockets, микросервисы, EF Core]
+  - group: Инструменты
+    items: [Figma, Adobe Suite, Pixelmator, Canva, Wix, Tilda, Miro, Notion, Jira, Confluence]
 
-  - group: Frontend
-    items: [React, Angular, HTML, CSS, Tailwind]
+  - group: Использование AI в дизайне
+    items: [Uizard, ChatGPT, Claude, Midjourney, Runway]
 
-  - group: DevOps и инфраструктура
-    items: [Kubernetes, Helm, Docker, Terraform, Ansible, GitLab CI, GitHub Actions, Jenkins]
+  - group: Процессы
+    items: [Agile/Scrum, Дизайн-спринты, Работа со стейкхолдерами, Передача дизайна в разработку, WCAG 2.1]
 
-  - group: Облака
-    items: [AWS — EC2, S3, RDS, VPC, IAM, ALB, Yandex Cloud, Selectel]
-
-  - group: Observability
-    items: [Prometheus, VictoriaMetrics, Grafana, Loki, Alertmanager, CloudWatch]
-
-  - group: Базы данных
-    items: [PostgreSQL, ClickHouse, MySQL, MongoDB, Redis, RabbitMQ]
-
-  - group: Геймдев
-    items: [Unity, GameMaker, мультиплеер, монетизация, игровой дизайн]
-
-  - group: Платформы
-    items: [Linux, Web, iOS, Android, macOS]
+  - group: Понимание front-end
+    items: [HTML5, CSS3, Tailwind CSS]
 
   - group: Языки
-    items: [Русский — родной, Английский — IELTS 7.0 (B2)]
+    items: [Русский — родной, Английский — свободный, Китайский — средний]
 
 experience:
 
-  - company: InfoScale
-    role: DevOps-инженер / Software Engineer
-    period: Дек 2024 — Янв 2026
+  - company: Sova Lab
+    role: Продакт-дизайнер
+    period: Апрель 2025 — Настоящее время
     description:
-      - Мониторинг и обслуживание 750+ Linux-серверов (Selectel VPS и bare metal)
-        — сетевые интерфейсы, порты, управление доступами, реагирование на инциденты
-      - Управление Kubernetes-кластерами в Yandex Cloud и self-hosted
-        (GitLab, Matrix, Keycloak, Vault); написание и поддержка Helm-чартов
-      - Построил Terraform-инфраструктуру для ~20 AWS-сервисов ($550 → $300/мес);
-        писал собственные модули, развернул ClickHouse; Ansible для конфигурации инстансов
-      - Оптимизировал CI/CD в нескольких репозиториях (GitHub Actions + GitLab CI);
-        единая структура пайплайнов сократила время деплоя с 8 до 2 минут
-      - Построил observability-стек с нуля — пробы VictoriaMetrics, алертинг Prometheus,
-        кастомные дашборды Grafana; Alertmanager с доставкой в Telegram и Matrix
-      - Спроектировал и разработал SaaS-сервис мониторинга полного цикла (Go + Gin/GORM + React)
-        — проверки ping, домена, SSL с интервалами от 10 сек до 24 часов; задеплоен в кластере Kubernetes
-      - Реагировал на SSH brute-force атаки через KVM live-доступ,
-        блокировку портов, ротацию пользователей и настройку таймаутов
-      - Вырастил команду инфраструктуры с 3 до 6 человек; менторил 3 джуниоров
-    stack: [Kubernetes, Helm, Docker, Terraform, Ansible, AWS, Yandex Cloud, GitLab CI, GitHub Actions, Go, React, PostgreSQL, ClickHouse, VictoriaMetrics, Grafana]
+      - Разработала фирменный стиль компании с нуля — логотип, визуальную систему и брендбук для консистентности продукта и маркетинговых материалов
+      - Спроектировала кросс-платформенное приложение безопасности для iOS и Android — UX-архитектура, онбординг, логика уведомлений и взаимодействие с устройствами
+      - Разработала SaaS-сайт продукта, улучшив ясность ценностного предложения и поддержку привлечения пользователей
+      - Создала масштабируемую дизайн-систему (компоненты, токены, документация), сократив время проектирования новых функций на 30%
+      - Интегрировала требования доступности (WCAG 2.1) в дизайн-систему, сделав соответствие стандартам частью процесса
+    stack: [Figma, Uizard, Midjourney, WCAG 2.1, iOS, Android]
 
-  - company: SOFTINTERMOB
-    role: Unity-разработчик
-    period: Ноя 2023 — Июл 2024
+  - company: AZN Research
+    role: Продакт / UX/UI Дизайнер
+    period: Февраль 2023 — Апрель 2025
     description:
-      - Разработал два мобильных приложения от Figma до релиза в App Store — полный цикл
-      - Интегрировал Firebase и сторонние SDK, решал проблемы совместимости iOS/Android
-      - Рефакторил legacy-кодовую базу, улучшил стабильность и производительность
-    stack: [Unity, C#, Firebase, iOS, Android]
+      - Спроектировала банковский сайт с нуля, разработав UX-архитектуру и ключевые пользовательские сценарии для финансовых сервисов
+      - Разработала дизайн платформы международных денежных переводов (Африка ↔ Европа), упростив транзакционные флоу
+      - Участвовала в улучшении UX экосистемы Ecobank (мобильное приложение, сайт и AOP-платформа), выявив системные проблемы и добавив новые пользовательские сценарии
+      - Разработала SaaS-сайт системы видеоверификации, совместив маркетинговое позиционирование с демонстрацией продукта для B2B-клиентов
+      - Сократила цикл согласования дизайна на 40% благодаря реорганизации пользовательских потоков и внедрению масштабируемых компонентов
+    stack: [Figma, Miro, Notion, Jira, Confluence]
 
-  - company: AZNResearch
-    role: Fullstack-разработчик
-    period: Июл 2022 — Окт 2023
+  - company: Anhui Dadao Company
+    role: UX/UI Дизайнер
+    period: Октябрь 2020 — Декабрь 2022
     description:
-      - Проектировал фронтенд-архитектуру внутренних продуктов для госсектора и enterprise (Angular + Tailwind)
-      - Разрабатывал бэкенд-микросервисы на .NET Core + EF Core, REST API и LINQ-запросы
-      - Внедрил Git-воркфлоу, код-ревью и CI-пайплайны, повысил продуктивность команды на 25%
-    stack: [Angular, Tailwind, C#, .NET Core, SQL Server, MySQL]
+      - Спроектировала мобильное приложение для поиска образовательных и развлекательных активностей для детей 2–15 лет (поиск, фильтры, бронирование)
+      - Проводила UX-исследования и интервью с родителями для понимания моделей принятия решений
+      - Создала новые пользовательские флоу с учётом широкой возрастной аудитории и разным уровнем цифровой грамотности
+      - Сократила среднее время выполнения задач на 30% за счёт улучшения информационной архитектуры
+      - Работала в международной команде над продуктом, конкурирующим с Meituan на китайском рынке
+    stack: [Figma, Adobe Suite, Miro]
 
-  - company: Neosight
-    role: Гейм-дизайнер
-    period: Ноя 2021 — Фев 2022
+  - company: Фриланс
+    role: Продакт / UX/UI Дизайнер
+    period: Февраль 2020 — Настоящее время
     description:
-      - Написал GDD для 6 мобильных игр — механики, монетизация, прогрессия
-      - Проводил эксперименты по валидации концептов, вырастил установки в 30 раз, CTR с 0.4% до 5%
-      - Балансировал уровни и кривые сложности по метрикам retention и drop-off
-    stack: [Unity, Game Design, Analytics]
-
-  - company: Udemy
-    role: Unity-разработчик
-    period: Мар 2021 — Окт 2021
-    description:
-      - Разработал приложение для изучения немецкого с нуля — 22 категории, ~3000 карточек
-      - Оптимизировал архитектуру и хранение данных, уменьшил размер с ~3GB до 400MB
-    stack: [Unity, C#, JSON, iOS, Android]
-
-  - company: Popside Games
-    role: Левел-дизайнер
-    period: Июл 2020 — Окт 2020
-    description:
-      - Спроектировал и сбалансировал 3000+ уровней для Match-3 и Solitaire в сжатые сроки
-      - Улучшил completion rate уровней на 15% через итеративное тестирование
-    stack: [Game Design, Level Design]
-
-  - company: SayGames
-    role: Гейм-дизайнер
-    period: Фев 2020 — Июн 2020
-    description:
-      - Проектировал механики и уровни для hyper-casual прототипов
-      - Участвовал в разработке Send Balls (100M+ скачиваний) и FlowerKing
-      - Улучшил D1-retention на 10% через итерации по метрикам
-    stack: [Game Design, Unity]
-
-  - company: Goodline
-    role: Software Engineer
-    period: Ноя 2019 — Янв 2020
-    description:
-      - Разрабатывал и адаптировал внутренние React-интерфейсы для мобильных устройств
-      - Улучшил производительность на 25% через оптимизацию компонентов
-    stack: [React, JavaScript]
-
-  - company: Project Tech
-    role: Software Engineer / Сооснователь
-    period: Фев 2017 — Окт 2019
-    description:
-      - Основал студию разработки — нанимал разработчиков, вёл переговоры с клиентами, заключал контракты
-      - Выступал вторым инженером и техлидом — от архитектурных решений до продакшн-кода
-      - Выпустил 10+ продуктов — игры, мобильные приложения и бизнес-ПО для ресторанов, доставки и VR
-      - Построил мультиплеерный бэкенд для Bhop Jump вдвоём — P2P + выделенные серверы до 16 игроков, $160K выручки в Q1
-      - Питчил паблишинг-сделки инди-разработчикам — ранний опыт в продукте и бизнес-развитии
-    stack: [Unity, C#, React, React Native, Xamarin, Node.js, WebSockets, Docker, VR]
+      - Проектировала цифровые продукты в сфере здравоохранения и психологической помощи, включая ветеринарную платформу VetPet и приложение для поиска психологов Vipsy
+      - Создавала масштабируемые UI-системы для стартапов на ранней стадии, позволяя быстрее развивать продукт и новые функции
+    stack: [Figma, Tilda, Wix, Canva]
 
 education:
-  - institution: Udemy
-    degree: Linux Foundation Computer Science
-    period: "2025"
+  - institution: Google
+    degree: Google UX Design Certificate — Профессиональная сертификация, UX Design
+    period: "2017–2018"
 
-  - institution: Udemy
-    degree: Certified Kubernetes Administrator
-    period: "2025"
+  - institution: Кемеровский государственный университет
+    degree: Диплом переводчика (английский язык)
+    period: "2017–2018"
 
-  - institution: Wargaming Forge
-    degree: Level Designer & Balancing
-    period: "2020"
-
-  - institution: Siberian Polytechnic University / Сибирский политехнический университет
-    degree: Faculty of Information Technology / Факультет информационных технологий
-    period: 2017–2018
+  - institution: Кемеровский государственный университет
+    degree: Бакалавр — Международные отношения
+    period: "2014–2018"
 
 languages:
   - language: Русский
     level: Родной
   - language: Английский
-    level: IELTS 7.0 (B2)
+    level: Свободный
+  - language: Китайский
+    level: Средний
