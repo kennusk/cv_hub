@@ -199,6 +199,36 @@ a:hover { text-decoration: underline; }
   background: rgba(var(--accent-rgb) / 0.10);
 }
 
+@media (max-width: 640px) {
+  .header__row {
+    gap: 6px;
+  }
+
+  .nav {
+    gap: 0;
+  }
+
+  /* Главная дублирует бренд — скрываем */
+  .nav > a:first-child {
+    display: none;
+  }
+
+  .nav a,
+  .dropdown__trigger {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+
+  .lang {
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .lang a {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}
 
 /* ─────────────────────────────────────────────────────────────────────────────
    DROPDOWN
