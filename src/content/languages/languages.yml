@@ -4,5 +4,5 @@ languages:
     label: "EN"
   - id: "ru"
     label: "RU"
-  - id: "cn"
+  - id: "zh"
     label: "CN"
