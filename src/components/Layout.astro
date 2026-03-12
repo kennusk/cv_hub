@@ -39,9 +39,9 @@ const t = makeT(translations?.data ?? {}, lang);
 
 // --- Meta ---
 const repo = import.meta.env.GITHUB_REPOSITORY;
-const [owner, repoName] = repo ? repo.split('/') : [null, null];
+const [owner] = repo ? repo.split('/') : [null, null];
 const siteUrl = owner
-  ? `https://${owner}.github.io/${repoName}`
+  ? `https://${owner}.github.io/`
   : 'http://localhost:4321';
 
 const metaDescription = description ?? t('meta.description');
