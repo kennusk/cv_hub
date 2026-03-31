@@ -403,13 +403,13 @@ a:hover { text-decoration: underline; }
 }
 
 .card__meta {
-  font-size: 13px;
+  font-size: 16px;
   margin-bottom: 4px;
 }
 
 .card__title {
   margin: 0;
-  font-size: 18px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--text);
 }
@@ -418,6 +418,7 @@ a:hover { text-decoration: underline; }
   margin: 10px 0 0;
   color: var(--muted);
   line-height: 1.6;
+  font-size: 20px;
 }
 
 
@@ -425,9 +426,15 @@ a:hover { text-decoration: underline; }
    TYPOGRAPHY
    ───────────────────────────────────────────────────────────────────────────── */
 
+.h1 {
+  margin: 0 0 10px;
+  font-size: 64px;
+  letter-spacing: 0.2px;
+}
+
 .h2 {
   margin: 0 0 10px;
-  font-size: 18px;
+  font-size: 40px;
   letter-spacing: 0.2px;
 }
 
@@ -599,7 +606,14 @@ a:hover { text-decoration: underline; }
 
 .project .links a:only-child {
   display: block;
-  width: 50%;
+  /* width: 50%; */
+  margin-top: 12px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
 }
 
