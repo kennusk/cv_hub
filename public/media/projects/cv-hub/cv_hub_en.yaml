@@ -7,8 +7,6 @@ platforms: [Web, GitHub Pages]
 stack: [Astro, TypeScript, YAML, Playwright, docx.js, GitHub Actions]
 
 links:
-  - label: Live Demo
-    url: https://keegooroomie.github.io/cv_hub/
   - label: GitHub
     url: https://github.com/KeeGooRoomiE/cv_hub
   - label: Changelog
