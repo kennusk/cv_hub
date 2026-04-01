@@ -384,6 +384,7 @@ a:hover { text-decoration: underline; }
   .card--achievements{ order: 3; }
   .section--experience { order: 4; }
   .card--skills      { order: 5; }
+  .section--education { order: 6; }
 }
 
 
