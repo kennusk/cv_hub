@@ -37,6 +37,10 @@ cv:
     en: "Achievements"
     ru: "Достижения"
     zh: "成就"
+  education:
+    en: "Education"
+    ru: "Образование"
+    zh: "学历"
   download:
     en: "Download"
     ru: "Скачать"
