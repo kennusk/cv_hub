@@ -12,7 +12,7 @@ blocks:
 
   - type: text
     links:
-      - label: Ссылка
+      - label: "bsbank.ru"
         url: https://bsbank.ru
 
   - type: divider
