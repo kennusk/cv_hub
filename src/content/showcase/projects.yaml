@@ -15,3 +15,20 @@ projects:
       - label: Смотреть кейс
         url: /cv_hub/showcase/vipsy/ru
         type: product
+
+  - slug: bsb
+    order: 1
+    name: Белгородсоцбанк
+    role: Fintech
+    year: "2025"
+    description: "Белгородсоцбанк — региональный банк с 30-летней историей, обслуживающий физических и юридических лиц."
+    theme: cyan
+    media:
+    - type: image
+      src: /media/projects/bsb/cover.png
+      alt: "Bsbs cover"
+      featured: true
+    links:
+      - label: Смотреть кейс
+        url: /cv_hub/showcase/bsb/ru
+        type: product
