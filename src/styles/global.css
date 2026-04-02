@@ -20,9 +20,10 @@
   --bg-glow-2: rgba(96 165 250 / 0.12);
 
   /* Текст */
-  --text: rgba(233, 238, 247, 0.96);
+  --text: #d3d3d3;
   --text-strong: rgba(233, 238, 247, 0.92);
   --muted: rgba(166, 177, 194, 0.90);
+  --body_text: #d3d3d3;
 
   /* Бордеры */
   --border: rgba(255, 255, 255, 0.10);
@@ -90,6 +91,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-size: 32px;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -137,7 +142,6 @@ a:hover { text-decoration: underline; }
   align-items: center;
   justify-content: space-evenly;
 }
-
 
 /* ─────────────────────────────────────────────────────────────────────────────
    HEADER
@@ -380,6 +384,7 @@ a:hover { text-decoration: underline; }
   .card--achievements{ order: 3; }
   .section--experience { order: 4; }
   .card--skills      { order: 5; }
+  .section--education { order: 6; }
 }
 
 
@@ -403,13 +408,13 @@ a:hover { text-decoration: underline; }
 }
 
 .card__meta {
-  font-size: 13px;
+  font-size: 16px;
   margin-bottom: 4px;
 }
 
 .card__title {
   margin: 0;
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--text);
 }
@@ -418,6 +423,7 @@ a:hover { text-decoration: underline; }
   margin: 10px 0 0;
   color: var(--muted);
   line-height: 1.6;
+  font-size: 16px;
 }
 
 
@@ -425,9 +431,15 @@ a:hover { text-decoration: underline; }
    TYPOGRAPHY
    ───────────────────────────────────────────────────────────────────────────── */
 
+.h1 {
+  margin: 0 0 10px;
+  font-size: 64px;
+  letter-spacing: 0.2px;
+}
+
 .h2 {
   margin: 0 0 10px;
-  font-size: 18px;
+  font-size: 28px;
   letter-spacing: 0.2px;
 }
 
@@ -442,7 +454,11 @@ a:hover { text-decoration: underline; }
 .list li { margin: 6px 0; }
 
 .section { margin-top: 14px; }
-.section__title { font-weight: 700; margin-top: 14px; }
+.section__title { 
+  font-weight: 700;
+  margin-top: 14px; 
+  font-size: 20px;
+}
 
 .stack {
   display: grid;
@@ -455,6 +471,18 @@ a:hover { text-decoration: underline; }
   gap: 12px;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.item__top__title {
+  font-size: 20px;
+}
+
+.item__top__date {
+  font-size: 16px;
+}
+
+.item__top__role {
+  font-size: 18px;
 }
 
 .row { margin-top: 12px; }
@@ -484,19 +512,20 @@ a:hover { text-decoration: underline; }
 
 .hero__name {
   margin: 0;
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: 28px;
   line-height: 1.12;
 }
 
 .hero__title {
   margin: 8px 0 0;
   font-weight: 750;
+  font-size: 20px;
   color: var(--text-strong);
 }
 
 .hero__summary {
   margin: 10px 0 0;
-  color: var(--muted);
+  color: var(--body_text);
   max-width: 70ch;
 }
 
@@ -551,7 +580,7 @@ a:hover { text-decoration: underline; }
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .pill {
@@ -585,7 +614,7 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
   border-radius: var(--r-pill);
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-strong);
   background: rgba(255, 255, 255, 0.03);
 }
@@ -599,7 +628,14 @@ a:hover { text-decoration: underline; }
 
 .project .links a:only-child {
   display: block;
-  width: 50%;
+  /* width: 50%; */
+  margin-top: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -628,10 +664,21 @@ a:hover { text-decoration: underline; }
 
 .skillsgroup__title {
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 20px;
   color: var(--text-strong);
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   EDUCATION
+   ───────────────────────────────────────────────────────────────────────────── */
+
+
+.education__stack {
+  display: grid;
+  gap: 14px;
+  /* margin-top: 10px; */
+}
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SHOWCASE: PROJECT CARDS

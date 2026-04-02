@@ -6,6 +6,7 @@
 //  Created by Alexander Gusarov on 03.03.2026.
 //  @spartan121
 //
+import { date } from 'astro:schema';
 import Layout from './Layout.astro';
 
 const {
@@ -24,6 +25,7 @@ const t = {
   skills:       tProp.skills       ?? 'Skills',
   experience:   tProp.experience   ?? 'Experience',
   achievements: tProp.achievements ?? 'Achievements',
+  education:    tProp.education    ?? 'Education',
   downloads:    tProp.downloads    ?? 'Download',
   company:      tProp.company      ?? 'Company',
   empty_skills:      tProp.empty_skills      ?? 'Add skills to YAML — tags will appear here.',
@@ -39,6 +41,7 @@ const contacts     = Array.isArray(data?.contacts)    ? data.contacts    : [];
 const rawSkills    = Array.isArray(data?.skills)      ? data.skills      : [];
 const experience   = Array.isArray(data?.experience)  ? data.experience  : [];
 const achievements = Array.isArray(data?.achievements)? data.achievements: [];
+const education    = Array.isArray(data?.education)   ? data.education   : [];
 
 const normalizeBullet = (v) => {
   if (typeof v === 'string') return v;
@@ -131,15 +134,7 @@ const skillGroups = rawSkills
           )}
         </div>
 
-        {/* 2. Achievements */}
-        {achievements.length > 0 && (
-          <article class="card card--achievements">
-            <h2 class="h2">{t.achievements}</h2>
-            <ul class="list">
-              {achievements.map((a) => <li>{a}</li>)}
-            </ul>
-          </article>
-        )}
+        
 
         {/* 3. Experience */}
         <section class="section section--experience">
@@ -150,10 +145,10 @@ const skillGroups = rawSkills
               {experience.map((e) => (
                 <article class="card item">
                   <div class="item__top">
-                    <strong>{e.company ?? t.company}</strong>
-                    <span class="muted">{e.period ?? ''}</span>
+                    <strong class="item__top__title">{e.company ?? t.company}</strong>
+                    <span class="muted item__top__date">{e.period ?? ''}</span>
                   </div>
-                  {e.role && <div class="muted">{e.role}</div>}
+                  {e.role && <div class="muted item__top__role">{e.role}</div>}
                   {Array.isArray(e.description) && e.description.length > 0 && (
                     <ul class="list">
                       {e.description.map((d) => <li>{normalizeBullet(d)}</li>)}
@@ -169,6 +164,29 @@ const skillGroups = rawSkills
               </p>
             </article>
           )}
+        </section>
+
+        {/* 2. Education */}
+        <section class="section section--education">
+          <h2 class="h2">{t.education}</h2>
+
+          {education.length > 0 ? (
+            <article class="card">
+              <div class="education__stack">
+                {education.map((e) => (
+                  <div class="item">
+                    <div class="item__top">
+                      <strong class="item__top__title">{e.institution}</strong>
+                      <span class="muted item__top__date">{e.period ?? ''}</span>
+                    </div>
+                    {e.degree && (
+                      <div class="muted item__top__role">{e.degree}</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </article>
+          ) : null}
         </section>
 
       </main>

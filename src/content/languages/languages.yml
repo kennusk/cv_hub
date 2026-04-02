@@ -1,6 +1,8 @@
-default: "ru"
+default: "en"
 languages:
   - id: "en"
     label: "EN"
   - id: "ru"
     label: "RU"
+  - id: "zh"
+    label: "CN"

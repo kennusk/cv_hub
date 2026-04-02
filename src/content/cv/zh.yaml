@@ -1,0 +1,107 @@
+name: 瓦丽娜
+title: 产品 / UX/UI 设计师
+
+summary: >
+  拥有5年以上金融科技、SaaS和移动端产品经验的产品设计师。
+  主导银行平台、国际汇款服务和IoT安全生态系统的全链路设计。
+  专注于从零到一的产品发布、构建可扩展设计系统，以及通过结构化UX方案提升转化率。
+
+contacts:
+  - label: 作品集
+    url: https://www.behance.net/valeriiakovalikova
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/valeria-kovalikova/
+  - label: Telegram
+    url: https://t.me/kennusk
+  - label: 邮箱
+    url: mailto:vkovalikova243@gmail.com
+
+achievements:
+  - 主导银行平台、国际汇款服务和IoT安全生态系统的全链路设计
+  - 借助AI工具在流程各环节的应用，将从简报到可测试原型的过渡时间缩短约30%
+  - 通过重构用户流程和引入可复用组件，将设计审批周期缩短40%
+  - 通过改善信息架构，将用户平均任务完成时间缩短30%
+  - 构建可扩展设计系统，使新功能设计时间缩短30%
+
+skills:
+  - group: 产品与UX
+    items: [用户研究, UX策略, 信息架构, 线框图, CJM, 原型设计, 可用性测试, A/B测试, 原子设计, 设计系统]
+
+  - group: 工具
+    items: [Figma, Adobe Suite, Pixelmator, Canva, Wix, Tilda, Miro, Notion, Jira, Confluence]
+
+  - group: 设计中的AI应用
+    items: [Uizard, ChatGPT, Claude, Midjourney, Runway]
+
+  - group: 流程
+    items: [Agile/Scrum, 设计冲刺, 利益相关者管理, 设计交付, WCAG 2.1]
+
+  - group: 前端基础
+    items: [HTML5, CSS3, Tailwind CSS]
+
+  - group: 语言
+    items: [俄语 — 母语, 英语 — 流利, 中文 — 中级]
+
+experience:
+
+  - company: Sova Lab
+    role: 产品设计师
+    period: 2025年4月 — 至今
+    description:
+      - 从零构建品牌视觉体系——标志、视觉系统和品牌手册，确保产品与营销材料的一致性
+      - 为iOS和Android设计跨平台安全应用——UX架构、引导流程、通知逻辑和设备交互
+      - 开发产品SaaS官网，提升价值主张清晰度，支持用户获取
+      - 构建可扩展设计系统（组件、Token、文档），使新功能设计时间缩短30%
+      - 将WCAG 2.1无障碍要求整合至设计系统，使合规成为标准工作流程的一部分
+    stack: [Figma, Uizard, Midjourney, WCAG 2.1, iOS, Android]
+
+  - company: AZN Research
+    role: 产品 / UX/UI 设计师
+    period: 2023年2月 — 2025年4月
+    description:
+      - 从零设计银行网站——UX架构及金融服务核心用户路径
+      - 设计国际汇款平台（非洲↔欧洲），简化交易流程
+      - 参与Ecobank UX生态系统优化（移动应用、网站和AOP平台），识别系统性问题并新增用户路径
+      - 为视频验证系统设计SaaS官网，将营销定位与面向B2B客户的产品演示相结合
+      - 通过重构用户流程和引入可复用组件，将设计审批周期缩短40%
+    stack: [Figma, Miro, Notion, Jira, Confluence]
+
+  - company: 安徽大道公司
+    role: UX/UI 设计师
+    period: 2020年10月 — 2022年12月
+    description:
+      - 为2–15岁儿童设计教育与娱乐活动搜索移动应用（搜索、筛选、预订）
+      - 开展UX研究和家长访谈，了解决策模型
+      - 针对广泛年龄段和不同数字素养水平创建新的用户流程
+      - 通过改善信息架构，将用户平均任务完成时间缩短30%
+      - 在国际团队中参与与美团竞争的中国市场产品开发
+    stack: [Figma, Adobe Suite, Miro]
+
+  - company: 自由职业
+    role: 产品 / UX/UI 设计师
+    period: 2020年2月 — 至今
+    description:
+      - 为医疗健康和心理辅助领域设计数字产品，包括兽医平台VetPet和心理咨询师搜索应用Vipsy
+      - 为早期创业公司构建可扩展UI系统，加速产品和功能迭代
+    stack: [Figma, Tilda, Wix, Canva]
+
+education:
+  - institution: Google
+    degree: Google UX设计认证 — 专业认证，UX设计
+    period: "2020"
+
+  - institution: 克麦罗沃国立大学
+    degree: 翻译学文凭（英语）
+    period: "2017–2018"
+
+  - institution: 克麦罗沃国立大学
+    degree: 国际关系学士学位
+    period: "2014–2018"
+
+languages:
+  - language: 俄语
+    level: 母语
+  - language: 英语
+    level: 流利
+  - language: 中文
+    level: 中级
