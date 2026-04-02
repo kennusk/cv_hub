@@ -25,7 +25,7 @@ projects:
         url: /cv_hub/changelog
         type: article
       - label: Deep Dive
-        url: /cv_hub/showcase/cv-hub
+        url: /showcase/cv-hub
         type: product
 
   - slug: steam-deck-keyboard

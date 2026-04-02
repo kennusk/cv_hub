@@ -154,6 +154,15 @@ if (kind === 'list') {
   projectSlugsWithPages = new Set(getSlugsWithYaml(langIds));
 }
 
+const showcaseLangLinks = kind === 'list'
+  ? allLangs.map(l => ({
+      id:     l.id,
+      label:  l.label,
+      href:   l.id === defaultLang ? `${base}/showcase` : `${base}/showcase/${l.id}`,
+      active: l.id === lang,
+    }))
+  : undefined;
+
 const featured = projects.filter((p: any) => p.featured && !p.archived && !p.archive);
 const regular  = projects.filter((p: any) => !p.featured && !p.archived && !p.archive);
 const archived = projects.filter((p: any) => p.archived || p.archive);
@@ -181,7 +190,7 @@ const langLinks = kind === 'project'
 ---
 
 {kind === 'list' ? (
-  <Layout title={t('showcase.page_title')} lang={lang} section="showcase" profile="">
+  <Layout title={t('showcase.page_title')} lang={lang} section="showcase" profile="" customLangLinks={showcaseLangLinks}>
     <section class="container">
       <header class="showcase__header">
         <h1>{t('showcase.title')}</h1>
