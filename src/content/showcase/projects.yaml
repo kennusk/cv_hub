@@ -13,7 +13,7 @@ projects:
       featured: true
     links:
       - label: Смотреть кейс
-        url: /cv_hub/showcase/vipsy/ru
+        url: /showcase/vipsy/ru
         type: product
 
   - slug: bsb
@@ -26,9 +26,9 @@ projects:
     media:
     - type: image
       src: /media/projects/bsb/cover.png
-      alt: "Bsbs cover"
+      alt: "Bsb cover"
       featured: true
     links:
       - label: Смотреть кейс
-        url: /cv_hub/showcase/bsb/ru
+        url: /showcase/bsb/ru
         type: product
