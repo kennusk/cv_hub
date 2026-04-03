@@ -17,7 +17,7 @@ projects:
         type: product
 
   - slug: bsb
-    order: 1
+    order: 2
     name: Белгородсоцбанк
     role: Fintech
     year: "2025"
@@ -31,4 +31,21 @@ projects:
     links:
       - label: Смотреть кейс
         url: /showcase/bsb/ru
+        type: product
+
+  - slug: unitymt
+    order: 3
+    name: Unity Money Transfer
+    role: Fintech
+    year: "2024"
+    description: "Unity Money Transfer — это веб-платформа для быстрых и безопасных денежных переводов между Нидерландами и рядом стран Африки."
+    theme: blue
+    media:
+    - type: image
+      src: /media/projects/unitymt/cover.png
+      alt: "Unity Money Transfer"
+      featured: true
+    links:
+      - label: Смотреть кейс
+        url: /showcase/unitymt/ru
         type: product
