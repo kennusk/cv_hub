@@ -1,0 +1,105 @@
+# --- /cv_hub/showcase/vipsy/ru
+
+title: "Vipsy"
+blocks:
+  - type: image
+    src: /media/projects/vipsy/cover.png
+    alt: "Main screen screenshot"
+
+  - type: text
+    title: "About the Project"
+    body: |
+      Vipsy is a mobile app for finding a therapist and selecting a therapy approach. The product helps users not only find a specialist, but also understand which approach suits them. The goal is to guide a user from a vague “I need help” state to a confirmed booking with the right specialist.
+
+  - type: text
+    links:
+      - label: App Store
+        url: "https://apps.apple.com/ru/app/vipsy-%D0%BF%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD/id6478947781?l=en-GB"
+  - type: divider
+
+# ── Текст: заголовок + подзаголовок + буллеты ───────────────────────────
+  - type: text
+    title: "Challenges"
+    bullets:
+      - Users often don’t know the specialist or the therapy type — the app must guide selection without overload or prior knowledge
+      - 'Low trust in specialists and online consultations; difficult to compare options'
+      - 'Complex monetization logic: both one-off sessions and subscriptions must be clearly presented'
+      - The account area must cover bookings, session history, and purchases without clutter
+  
+  - type: divider
+
+  - type: text
+    title: "Solution"
+    bullets:
+      - 'Designed a dual discovery flow: users can pick a therapy direction or a service to get matched specialists, or book directly with a chosen specialist by selecting a specific service'
+      - 'Created a specialist profile focused on trust: areas, approach, experience, services — all on one screen with minimal navigation'
+      - 'Built a clear purchase logic: one-off sessions and subscriptions are visually separated; streamlined the booking flow'
+      - 'Designed the account area with sections for active bookings, history, and purchases'
+      - 'Crafted a calm, safety-oriented UI to reduce anxiety'
+
+  - type: divider
+
+  - type: text
+    title: "Results"
+    bullets:
+      - 'Established a complete user journey from first screen to confirmed booking'
+      - 'Simplified selection of specialists and therapy types through structured information'
+      - 'The interface is perceived as calm and safe'
+      - 'Delivered as a commercial project within agreed timelines'
+
+  - type: divider
+
+  - type: image
+    title: "Onboarding Screens"
+    src: /media/projects/vipsy/starting_screens.png
+    alt: "Onboarding screens"
+    
+  - type: image
+    title: "Authentication Flow"
+    src: /media/projects/vipsy/auth_flow.png
+    alt: "Authentication flow"
+
+  - type: image
+    title: "Account"
+    src: /media/projects/vipsy/account.png
+    alt: "Account"
+
+  - type: image
+    title: "Therapy Types & Specialists"
+    src: /media/projects/vipsy/specs.png
+    alt: "Therapy types and specialists"
+
+  # ── Картинка с заголовком и текстом сверху ──────────────────────────────
+  - type: image
+    title: "Booking a Session"
+    subtitle: "Flexible booking flow: users can pick a time immediately or proceed without selecting a time and return to the schedule later. This lowers the entry barrier and retains users who aren’t ready to commit to a specific date."
+    src: /media/projects/vipsy/record.png
+    alt: "Booking a session"
+
+  - type: image
+    title: "Purchase a Service"
+    subtitle: "Multiple scenarios are supported: purchase without selecting a time and book later, or choose a specialist and a convenient slot immediately. Subscriptions are purchased without time selection, then activated in the account, after which users schedule sessions themselves."
+    src: /media/projects/vipsy/buy.png
+    alt: "Purchase a service"
+
+  - type: image
+    title: "My Services"
+    subtitle: "All purchased services are split into active and archived. From active services, users can book a session if time wasn’t selected during purchase. Rescheduling, cancellation, and subscription activation are available. All session management is centralized in one place."
+    src: /media/projects/vipsy/serv.png
+    alt: "My services"
+   
+  - type: text
+    title: "Thanks for watching!"
+
+  - type: divider
+
+  - type: text
+    title: "Contacts"
+    links:
+      - label: Email
+        url: mailto:vkovalikova243@gmail.com
+      - label: LinkedIn
+        url: https://www.linkedin.com/in/valeria-kovalikova/
+      - label: Telegram
+        url: https://t.me/kennusk
+  

@@ -1,0 +1,118 @@
+# --- /cv_hub/showcase/vipsy/ru
+
+title: "Unity Money Transfer"
+blocks:
+  - type: image
+    src: /media/projects/unitymt/cover.png
+    alt: "Main screen screenshot"
+
+  - type: text
+    title: "About the Project"
+    body: |
+      Unity Money Transfer is a web platform for fast and secure money transfers between the Netherlands and several African countries. The goal of the project is to simplify international transfers by focusing on transparency, speed, and usability for different user groups (expats, families, and small businesses).
+
+  - type: text
+    links:
+      - label: Behance
+        url: "https://www.behance.net/gallery/234804767/Money-Transfer-Website"
+  - type: divider
+
+# ── Текст: заголовок + подзаголовок + буллеты ───────────────────────────
+  - type: text
+    title: "Challenges"
+    bullets:
+      - 'Overloaded and confusing user flows — users need to be guided to completion without drop-offs'
+      - 'Difficulty understanding fees and the final transfer amount'
+      - 'Complex monetization logic: both one-time transactions and subscription models need to be clearly presented'
+      - 'Low trust in online transfers, especially for international transactions — the product must convey reliability and transparency'
+  
+  - type: divider
+
+  - type: text
+    title: "Solution"
+    bullets:
+      - 'Conducted UX research: analyzed the audience and usage scenarios to align flows with real user behavior'
+      - 'Designed a homepage converter as a key engagement element — users instantly see exchange rates and benefits'
+      - 'Simplified the money transfer flow into a linear step-by-step process'
+      - 'Designed a UI system focused on security and trust: minimal distractions, clear emphasis on key actions'
+
+  - type: divider
+
+  - type: text
+    title: "Results"
+    bullets:
+      - 'The transfer flow became clear and predictable — suitable even for users with low digital literacy'
+      - 'Improved transparency through clear fee visibility'
+
+  - type: divider
+
+  - type: image
+    title: "Main Screens"
+    src: /media/projects/unitymt/main.png
+    alt: "Main screens"
+    
+  - type: image
+    title: "Sign Up / Login"
+    src: /media/projects/unitymt/auth.png
+    alt: "Authentication flow"
+
+  - type: image
+    title: "App Download Option"
+    src: /media/projects/unitymt/app.png
+    alt: "App download option"
+
+  - type: image
+    src: /media/projects/unitymt/try_app.png
+    alt: "App download option"
+
+  - type: image
+    title: "Support"
+    src: /media/projects/unitymt/support.png
+    alt: "Support"
+
+  # ── Картинка с заголовком и текстом сверху ──────────────────────────────
+  - type: image
+    title: "Design System"
+    subtitle: "A lightweight design system was created for the project. It included reusable components such as buttons, inputs, and dropdowns, ensuring a consistent visual style across the platform. This improved development efficiency and consistency."
+    src: /media/projects/unitymt/ds1.png
+    alt: "Design system"
+
+  - type: image
+    src: /media/projects/unitymt/ds2.png
+    alt: "Design system"
+   
+  - type: text
+    title: "Thanks for watching!"
+
+  - type: divider
+
+  - type: text
+    title: "Contacts"
+    links:
+      - label: Email
+        url: mailto:vkovalikova243@gmail.com
+      - label: LinkedIn
+        url: https://www.linkedin.com/in/valeria-kovalikova/
+      - label: Telegram
+        url: https://t.me/kennusk
+  
+
+
+  
+  
+
+
+
+
+      
+
+
+  
+
+
+
+
+
+
+
+

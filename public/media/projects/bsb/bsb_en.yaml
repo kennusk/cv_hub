@@ -1,0 +1,117 @@
+title: "Belgorodsotsbank"
+blocks:
+
+  - type: image
+    src: /media/projects/bsb/cover.png
+    alt: "Main screen screenshot"
+
+  - type: text
+    title: "About the Project"
+    body: |
+      Belgorodsotsbank is a regional bank with over 30 years of history, serving both individuals and businesses. The website was visually and structurally outdated: it didn’t reflect brand trust or meet modern user expectations. The goal was to redesign the platform while preserving parts of the existing product structure, introducing new offerings, and rethinking content presentation and navigation.
+
+  - type: text
+    links:
+      - label: "bsbank.ru"
+        url: https://bsbank.ru
+
+  - type: divider
+
+  - type: text
+    title: "Challenges"
+    bullets:
+      - Outdated visual language that didn’t match the expectations of a financial brand
+      - 'Confusing navigation: unclear user flows and paths to key actions'
+      - Lack of clear hierarchy — important information was lost among secondary content
+      - No proper adaptation for mobile and tablet devices
+      - 'Low interface trust: a critical issue for banking products'
+
+  - type: divider
+
+  - type: text
+    title: "Solution"
+    bullets:
+      - 'Conducted a UX audit of the existing website: identified navigation issues and gaps in user expectations'
+      - Designed a new visual language — clean, modern, and trust-oriented
+      - Built a component library to ensure UI consistency across all pages
+      - Reworked information architecture, defined clear CTAs and user flows
+
+  - type: divider
+
+  - type: text
+    title: "Website Structure"
+    bullets:
+      - Section for individuals (deposits, bank cards, loans, fast payment system, registration in national identity systems, safe deposit boxes, interest rates)
+      - Section for businesses (loans, guarantees, factoring, foreign trade services, business accounts, deposits, remote banking)
+      - Online banking
+      - Shareholders
+      - Partners
+      - About the bank
+      - Reports
+      - Contacts
+
+  - type: divider
+
+  - type: text
+    title: "Results"
+    bullets:
+      - Visual language aligned with expectations of a financial product
+      - Reduced user path to key actions through simplified structure
+      - Delivered within timeline without quality loss during handoff
+
+  - type: divider
+
+  - type: image
+    title: "Main Pages (Individuals & Businesses)"
+    subtitle: "Introduced visual segmentation by audience: light theme for individuals and general sections, dark theme for business users. This allows users to instantly identify the relevant section without extra cognitive load."
+    src: /media/projects/bsb/mpw.png
+    alt: "Main pages"
+
+  - type: image
+    src: /media/projects/bsb/mpb.png
+    alt: "Main pages"
+
+  - type: image
+    title: "Deposits for Individuals"
+    src: /media/projects/bsb/phys.png
+    alt: "Deposits for individuals"
+
+  - type: image
+    title: "Business Loan"
+    src: /media/projects/bsb/credit.png
+    alt: "Business loan"
+
+  - type: image
+    title: "Bank Guarantee (Responsive)"
+    src: /media/projects/bsb/guaranties.png
+    alt: "Bank guarantee responsive"
+
+  - type: image
+    title: "Safe Deposit Boxes (Responsive)"
+    src: /media/projects/bsb/safes.png
+    alt: "Safe deposit boxes responsive"
+
+  - type: image
+    title: "Business Account"
+    src: /media/projects/bsb/mbadapt.png
+    alt: "Business account"
+
+  - type: image
+    title: "Loans for Individuals"
+    src: /media/projects/bsb/mbcredit.png
+    alt: "Loans for individuals"
+
+  - type: text
+    title: "Thanks for watching!"
+
+  - type: divider
+
+  - type: text
+    title: "Contacts"
+    links:
+      - label: Email
+        url: mailto:vkovalikova243@gmail.com
+      - label: LinkedIn
+        url: https://www.linkedin.com/in/valeria-kovalikova/
+      - label: Telegram
+        url: https://t.me/kennusk
