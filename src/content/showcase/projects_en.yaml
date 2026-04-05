@@ -13,7 +13,7 @@ projects:
       featured: true
     links:
       - label: Case Study
-        url: /showcase/vipsy/ru
+        url: /showcase/vipsy/en
         type: product
 
   - slug: bsb
@@ -30,7 +30,7 @@ projects:
       featured: true
     links:
       - label: Case Study
-        url: /showcase/bsb/ru
+        url: /showcase/bsb/en
         type: product
 
   - slug: unitymt
@@ -47,7 +47,7 @@ projects:
       featured: true
     links:
       - label: Case Study
-        url: /showcase/unitymt/ru
+        url: /showcase/unitymt/en
         type: product
 
   - slug: elitesamui
@@ -64,7 +64,7 @@ projects:
       featured: true
     links:
       - label: Case Study
-        url: /showcase/elitesamui/ru
+        url: /showcase/elitesamui/en
         type: product
 
        
