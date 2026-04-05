@@ -4,7 +4,7 @@ projects:
     name: Vipsy
     role: Healthcare
     year: "2025"
-    description: "Мобильное приложение для подбора психолога: от выбора направления терапии до записи к специалисту и оплаты."
+    description: "Mobile app for selecting a psychologist: from choosing the therapy direction to booking a specialist and payment."
     theme: blue
     media:
     - type: image
@@ -12,16 +12,16 @@ projects:
       alt: "Vipsy cover"
       featured: true
     links:
-      - label: Смотреть кейс
+      - label: Case Study
         url: /showcase/vipsy/ru
         type: product
 
   - slug: bsb
     order: 2
-    name: Белгородсоцбанк
+    name: Bsbank
     role: Fintech
     year: "2025"
-    description: "Редизайн сайта регионального банка: новая структура, навигация и визуальный язык с разделением аудиторий по теме оформления."
+    description: "Regional bank website: new structure, navigation, and visual language with audience segmentation by design theme."
     theme: cyan
     media:
     - type: image
@@ -29,7 +29,7 @@ projects:
       alt: "Bsb cover"
       featured: true
     links:
-      - label: Смотреть кейс
+      - label: Case Study
         url: /showcase/bsb/ru
         type: product
 
@@ -38,7 +38,7 @@ projects:
     name: Unity Money Transfer
     role: Fintech
     year: "2024"
-    description: "Веб-платформа для международных денежных переводов с простым флоу для аудитории с разным уровнем цифровой грамотности."
+    description: "Web platform for international money transfers with a simple flow for audiences with varying levels of digital literacy."
     theme: blue
     media:
     - type: image
@@ -46,16 +46,16 @@ projects:
       alt: "Unity Money Transfer"
       featured: true
     links:
-      - label: Смотреть кейс
+      - label: Case Study
         url: /showcase/unitymt/ru
         type: product
 
   - slug: elitesamui
     order: 4
     name: Elite Samui
-    role: Finance
+    role: Estate
     year: "2024"
-    description: "Сайт премиальной недвижимости на острове Самуи: логотип, сценарии покупки, аренды и структура под международного покупателя.​​​​​​​​​​​​​​​​"
+    description: "Premium real estate website on the island of Samui: logo, purchase and rental scenarios, and structure for international buyers."
     theme: blue
     media:
     - type: image
@@ -63,9 +63,8 @@ projects:
       alt: "Unity Money Transfer"
       featured: true
     links:
-      - label: Смотреть кейс
+      - label: Case Study
         url: /showcase/elitesamui/ru
         type: product
 
        
-
