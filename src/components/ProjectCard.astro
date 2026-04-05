@@ -98,7 +98,7 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
               class="media__el"
               src={withBase(featuredMedia.src)}
               alt={featuredMedia.alt ?? ''}
-              loading="lazy"
+              loading="eager"
               onerror="this.closest('.media')?.remove();"
             />
           )}
@@ -118,7 +118,7 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
                       class="thumb__img"
                       src={withBase(m.src)}
                       alt={m.alt ?? ''}
-                      loading="lazy"
+                      loading="eager"
                       onerror="this.closest('.thumb')?.remove();"
                     />
                   )}
@@ -251,7 +251,7 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
             class="media__el"
             src={withBase(featuredMedia.src)}
             alt={featuredMedia.alt ?? ''}
-            loading="lazy"
+            loading="eager"
             onerror="this.closest('.media')?.remove();"
           />
         )}
@@ -271,7 +271,7 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
                     class="thumb__img"
                     src={withBase(m.src)}
                     alt={m.alt ?? ''}
-                    loading="lazy"
+                    loading="eager"
                     onerror="this.closest('.thumb')?.remove();"
                   />
                 )}

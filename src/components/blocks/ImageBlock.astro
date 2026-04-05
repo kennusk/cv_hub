@@ -33,7 +33,7 @@ const withBase = (p = '') => {
       <img
         src={withBase(src)}
         alt={alt ?? title ?? ''}
-        loading="lazy"
+        loading="eager"
         class="image-block__img"
         onerror="this.closest('figure')?.remove();"
       />
