@@ -2,6 +2,7 @@ title: "CV Hub"
 role: "Author & Developer"
 year: "2026"
 tagline: "Resume as Code. Treat your professional identity as a reproducible, versioned system."
+shareable: true
 
 platforms: [Web, GitHub Pages]
 stack: [Astro, TypeScript, YAML, Playwright, docx.js, GitHub Actions]

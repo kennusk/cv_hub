@@ -1,5 +1,6 @@
 title: "CV Hub"
 tagline: "Resume as Code. Рассматривай свою профессиональную идентичность как воспроизводимую и версионируемую систему."
+shareable: true
 
 platforms: [Web, GitHub Pages]
 stack: [Astro, TypeScript, YAML, Playwright, docx.js, GitHub Actions]
