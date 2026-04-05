@@ -55,6 +55,22 @@ cv:
     zh: "在 YAML 中添加经验，这里会显示你的时间线。"
 
 showcase:
+  platforms:
+    en: "Platforms"
+    ru: "Платформы"
+    zh: "平台"
+  stack:
+    en: "Stack"
+    ru: "Стек"
+    zh: "技术栈"
+  tags:
+    en: "Tags"
+    ru: "Теги"
+    zh: "标签"
+  featured:
+    en: "Featured"
+    ru: "Избранное"
+    zh: "精选"
   title:
     en: "Showcase"
     ru: "Проекты"

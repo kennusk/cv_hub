@@ -427,11 +427,6 @@ projects:
       - label: Google Play
         url: https://play.google.com/store/apps/details?id=com.weaveGames.popthemall
         type: store
-    media:
-      - type: image
-        src: /media/projects/pop-them-all/cover.png
-        alt: "Pop Them All gameplay"
-        featured: true
 
   - slug: hole-run
     order: 19
@@ -447,11 +442,6 @@ projects:
       - label: Google Play
         url: https://play.google.com/store/apps/details?id=com.sketchteam.ColorBallSketch
         type: store
-    media:
-      - type: image
-        src: /media/projects/hole-run/cover.png
-        alt: "Hole Run gameplay"
-        featured: true
 
   - slug: personality-shift
     order: 20
@@ -684,11 +674,6 @@ projects:
       - label: Google Play
         url: https://play.google.com/store/apps/details?id=com.getmeback.kalinamalina
         type: store
-    media:
-      - type: image
-        src: /media/projects/kalina-malina/cover.png
-        alt: "Калина‑Малина delivery app interface"
-        featured: true
 
   - slug: transport-railroad-crossing
     order: 31

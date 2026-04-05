@@ -17,9 +17,25 @@ const { data, showcaseHref, langLinks, lang } = Astro.props;
 <Layout title={data?.title ?? ''} lang={lang} section="showcase" profile="" customLangLinks={langLinks}>
 <div class="project-page container">
 
-  <!-- Nav: back + language switcher -->
+  <!-- Nav: back + share button -->
   <nav class="project-page__nav">
     <a class="btn btn--ghost" href={showcaseHref}>← Showcase</a>
+    
+    {data.shareable === true && (
+      <button 
+        class="btn btn--ghost btn--icon share-btn" 
+        type="button"
+        aria-label="Copy link"
+      >
+        <svg class="share-btn__icon share-btn__icon--link" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+        </svg>
+        <svg class="share-btn__icon share-btn__icon--check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </button>
+    )}
   </nav>
 
   <!-- Header -->
@@ -79,6 +95,29 @@ const { data, showcaseHref, langLinks, lang } = Astro.props;
 </div>
 </Layout>
 
+<script>
+  document.addEventListener('click', async (e) => {
+    const btn = (e.target as HTMLElement)?.closest('.share-btn');
+    if (!btn) return;
+
+    const url = window.location.href;
+    
+    try {
+      await navigator.clipboard.writeText(url);
+      
+      // Показываем галочку
+      btn.classList.add('share-btn--copied');
+      
+      // Возвращаем иконку ссылки через 3 секунды
+      setTimeout(() => {
+        btn.classList.remove('share-btn--copied');
+      }, 3000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  });
+</script>
+
 <style>
   .project-page {
     display: flex;
@@ -90,7 +129,7 @@ const { data, showcaseHref, langLinks, lang } = Astro.props;
   .project-page__nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     gap: 16px;
     flex-wrap: wrap;
   }
@@ -124,5 +163,35 @@ const { data, showcaseHref, langLinks, lang } = Astro.props;
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  /* Share button */
+  .btn--icon {
+    padding: 12px;
+    min-width: auto;
+    position: relative;
+  }
+
+  .share-btn__icon {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .share-btn__icon--check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    stroke: var(--success, #10b981);
+  }
+
+  .share-btn--copied .share-btn__icon--link {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .share-btn--copied .share-btn__icon--check {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 </style>
