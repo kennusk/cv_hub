@@ -1,4 +1,17 @@
+# actual types of elements: fixed, added, changed, removed
+
 changelog:
+  - version: "1.5.2"
+    date: "2026-04-05"
+    changes:
+      - type: fixed
+        text: "Mobile pages performance — removed unnecessary CSS rules"
+      - type: fixed
+        text: "Language switcher on showcase pages now correctly switches between project translations"
+      - type: added
+        text: "Share button for case study pages (shareable: true in YAML, added to example_cs)"
+      - type: changed
+        text: "ProjectCard translation props — simplified from object-based to direct strings"
   - version: "1.5.1"
     date: "2026-04-02"
     changes:

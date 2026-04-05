@@ -138,9 +138,9 @@ const t = makeT(translations?.data ?? {}, lang);
 let projects: any[] = [];
 let projectSlugsWithPages = new Set<string>();
 
-if (kind === 'list') {
+  if (kind === 'list') {
   try {
-    const entry = await getEntry('showcase', 'projects');
+    const entry = await getEntry('showcase', `projects_${lang}`);
     projects = entry?.data?.projects ?? [];
   } catch {}
 
@@ -203,10 +203,13 @@ const langLinks = kind === 'project'
         {projects.map((p: any) => (
           <ProjectCard
             project={p}
-            lang={lang}
-            hasCasePage={projectSlugsWithPages.has(p.slug ?? '')}
-            base={base}
-            defaultLang={defaultLang}
+            t={{
+              platforms: t('showcase.platforms')[lang] ?? 'Platforms',
+              stack:     t('showcase.stack')[lang] ?? 'Stack',
+              tags:      t('showcase.tags')[lang] ?? 'Tags',
+              featured:  t('showcase.featured')[lang] ?? 'Featured',
+            }}
+            ...
           />
         ))}
       </div>
