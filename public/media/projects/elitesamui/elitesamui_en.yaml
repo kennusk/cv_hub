@@ -51,7 +51,7 @@ blocks:
       - 'Contact Information'
 
   - type: image
-    title: "Home Page"
+    title: "Homepage"
     src: /media/projects/elitesamui/main.png
     alt: "Home page"
     

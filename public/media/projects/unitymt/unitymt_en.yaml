@@ -23,7 +23,7 @@ blocks:
     bullets:
       - 'Overloaded and confusing user flows — users need to be guided to completion without drop-offs'
       - 'Difficulty understanding fees and the final transfer amount'
-      - 'Complex monetization logic: both one-time transactions and subscription models need to be clearly presented'
+      - 'different levels of literacy among the target audience'
       - 'Low trust in online transfers, especially for international transactions — the product must convey reliability and transparency'
   
   - type: divider
@@ -35,10 +35,6 @@ blocks:
       - 'Designed a homepage converter as a key engagement element — users instantly see exchange rates and benefits'
       - 'Simplified the money transfer flow into a linear step-by-step process'
       - 'Designed a UI system focused on security and trust: minimal distractions, clear emphasis on key actions'
-
-  - type: divider
-
-  
 
   - type: divider
 

@@ -1,4 +1,4 @@
-title: "Belgorodsotsbank"
+title: "Bsbank"
 blocks:
 
   - type: image
@@ -8,7 +8,7 @@ blocks:
   - type: text
     title: "About the Project"
     body: |
-      Belgorodsotsbank is a regional bank with over 30 years of history, serving both individuals and businesses. The website was visually and structurally outdated: it didn’t reflect brand trust or meet modern user expectations. The goal was to redesign the platform while preserving parts of the existing product structure, introducing new offerings, and rethinking content presentation and navigation.
+      Bsbank is a regional bank with over 30 years of history, serving both individuals and businesses. The website was visually and structurally outdated: it didn’t reflect brand trust or meet modern user expectations. The goal was to redesign the platform while preserving parts of the existing product structure, introducing new offerings, and rethinking content presentation and navigation.
 
   - type: text
     links:
