@@ -62,9 +62,8 @@ jobs:
     steps:
       - name: Notify Telegram (success)
         if: success()
-        run: |
-          curl -s -X POST https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage -d chat_id=${{ secrets.CHAT_ID }} -d text="@${{ github.actor }}%0A✅ Deployment succeeded!%0AVisit the site: [here](${{ needs.deploy.outputs.page_url }})" -d parse_mode=Markdown
+        run: curl -s -X POST "https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage" -d chat_id="${{ secrets.CHAT_ID }}" -d text="@${{ github.actor }}%0A✅ Deployment succeeded!%0AVisit the site:%0Ahttps://your-github-username.github.io/cv_hub/" -d parse_mode=Markdown
 
       - name: Notify Telegram (failure)
         if: failure()
-        run: curl -s -X POST https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage -d chat_id=${{ secrets.CHAT_ID }} -d text="@${{ github.actor }}%0A❌ Deployment failed!%0AVisit [job](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) and [commit](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}) to checkout" -d parse_mode=Markdown
+        run: curl -s -X POST "https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage" -d chat_id="${{ secrets.CHAT_ID }}" -d text="@${{ github.actor }}%0A❌ Deployment failed!" -d parse_mode=Markdown
