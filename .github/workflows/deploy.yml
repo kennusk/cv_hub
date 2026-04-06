@@ -54,3 +54,20 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  notify_telegram:
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Notify Telegram (success)
+        if: success()
+        run: |
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage -d chat_id=${{ secrets.CHAT_ID }} -d text="@${{ github.actor }}
+✅ Deployment succeeded!
+Visit the site: [here](${{ needs.deploy.outputs.page_url }})" -d parse_mode=Markdown
+
+      - name: Notify Telegram (failure)
+        if: failure()
+        run: |
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage -d chat_id=${{ secrets.CHAT_ID }} -d text="❌ Deployment failed!"
