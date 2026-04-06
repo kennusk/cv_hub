@@ -62,7 +62,7 @@ jobs:
     steps:
       - name: Notify Telegram (success)
         if: success()
-        run: curl -s -X POST "https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage" -d chat_id="${{ secrets.CHAT_ID }}" -d text="@${{ github.actor }}%0A✅ Deployment succeeded!%0AVisit the site:%0Ahttps://your-github-username.github.io/cv_hub/"
+        run: curl -s -X POST "https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage" -d chat_id="${{ secrets.CHAT_ID }}" -d text="@${{ github.actor }}%0A✅ Deployment succeeded!%0AVisit the site:%0Ahttps://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
 
       - name: Notify Telegram (failure)
         if: failure()
