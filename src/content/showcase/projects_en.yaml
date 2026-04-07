@@ -4,7 +4,7 @@ projects:
     name: Vipsy
     role: Healthcare
     year: "2025"
-    description: "Mobile app for selecting a psychologist: from choosing the therapy direction to booking a specialist and payment."
+    description: "Mobile app for selecting a psychologist: from choosing the therapy direction to effortless specialist booking and payment."
     theme: blue
     media:
     - type: image
@@ -67,4 +67,19 @@ projects:
         url: /showcase/elitesamui/
         type: product
 
-       
+  - slug: aznm
+    order: 5
+    name: AZN Meeting
+    role: Fintech
+    year: "2023"
+    description: "A landing page for a business online identity verification platform - from explaining the product to requesting a demo.​"
+    theme: blue
+    media:
+    - type: image
+      src: /media/projects/aznm/cover.png
+      alt: "AZN Meeting"
+      featured: true
+    links:
+      - label: Смотреть кейс
+        url: /showcase/aznm/
+        type: product
