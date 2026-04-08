@@ -80,6 +80,6 @@ projects:
       alt: "AZN Meeting"
       featured: true
     links:
-      - label: Смотреть кейс
+      - label: Show more 
         url: /showcase/aznm/
         type: product

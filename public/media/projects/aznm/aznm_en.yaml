@@ -3,63 +3,58 @@ blocks:
 
   - type: image
     src: /media/projects/aznm/case_cover.png
-    alt: "Скриншот главного экрана"
+    alt: "Main screen screenshot"
 
   - type: text
-    title: "О проекте"
+    title: "About the project"
     body: |
-      AZN Meeting — платформа видеоверификации личности для бизнеса. Сервис позволяет проводить верификацию клиентов онлайн без визита в офис, с поддержкой ИИ и машинного обучения. Задача — создать лендинг с нуля, который объясняет сложный продукт простым языком и конвертирует интерес в заявку на демоверсию.
-
-  # - type: text
-  #   links:
-  #     - label: "bsbank.ru"
-  #       url: https://bsbank.ru
+      AZN Meeting is a video identity verification platform for businesses. The service enables companies to verify clients online without requiring an in-person visit, with support for AI and machine learning. The goal was to create a landing page from scratch that explains a complex product in simple terms and converts interest into demo requests.
 
   - type: divider
 
   - type: text
-    title: "Проблемы"
+    title: "Challenges"
     bullets:
-      - "Необходимость быстро донести ценность для бизнеса"
-      - "Разная целевая аудитория (финтех, маркетплейсы, сервисы, госструктуры)"
-      - "Два типа пользователей внутри продукта (клиенты и администраторы ) с разными сценариями и задачами"
-      - "Главное целевое действие — заявка на демо"
+      - "Need to quickly communicate business value"
+      - "Diverse target audience (fintech, marketplaces, services, government organizations)"
+      - "Two types of users within the product (clients and administrators) with different scenarios and tasks"
+      - "Primary conversion goal — demo request"
 
   - type: divider
 
   - type: text
-    title: "Решения"
+    title: "Solutions"
     bullets:
-      - "Выстроила структуру лендинга по принципу «от проблемы к решению»: преимущества → что предлагаем → для кого → как работает → призыв к действию"
-      - "Разделила блок «Что мы предлагаем» для клиентов и для администраторов"
-      - "Визуализировала сценарии использования через диаграмму «Для кого» с отраслями и примерами применения"
-      - "Разработала пошаговый блок «Как это работает», чтобы снять барьер перед незнакомым продуктом"
+      - "Built the landing structure based on a ‘problem → solution’ approach: benefits → offering → target audience → how it works → call to action"
+      - "Separated the ‘What we offer’ section for clients and administrators"
+      - "Visualized use cases through a ‘Who it’s for’ diagram with industries and examples"
+      - "Designed a step-by-step ‘How it works’ section to reduce the barrier for an unfamiliar product"
 
   - type: divider
 
   - type: image
-    title: "Лендинг"
+    title: "Landing page"
     src: /media/projects/aznm/landing.png
-    alt: "Лендинг"
+    alt: "Landing page"
 
   - type: image
-    title: "Форма заявки (десктоп и мобильная версии)"
+    title: "Application form (desktop and mobile versions)"
     src: /media/projects/aznm/form.png
-    alt: "Форма заявки (десктоп и мобильная версии)"
+    alt: "Application form (desktop and mobile versions)"
 
   - type: image
-    title: "Вайрфреймы"
-    subtitle: "Работа началась с вайрфреймов — на этом этапе я сосредоточилась на структуре и логике подачи контента, не отвлекаясь на визуал. Нужно было найти правильный порядок блоков: как провести пользователя от знакомства с продуктом до целевого действия без лишних шагов."
+    title: "Wireframes"
+    subtitle: "The work started with wireframes — at this stage, the focus was on structure and content flow without being distracted by visuals. The goal was to find the right order of blocks: how to guide the user from initial awareness to the target action without unnecessary steps."
     src: /media/projects/aznm/wireframes.png
-    alt: "Вайрфреймы"
+    alt: "Wireframes"
 
   - type: text
-    title: "Спасибо за просмотр!"
+    title: "Thanks for watching!"
 
   - type: divider
 
   - type: text
-    title: "Контакты"
+    title: "Contacts"
     links:
       - label: Email
         url: mailto:vkovalikova243@gmail.com
