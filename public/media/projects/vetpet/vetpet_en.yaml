@@ -48,6 +48,8 @@ blocks:
       - "User account — appointments, history, purchased subscriptions"
       - "Blog — veterinary articles"
 
+  - type: divider
+
   - type: image
     title: "Old website design"
     src: /media/projects/vetpet/old_design.png

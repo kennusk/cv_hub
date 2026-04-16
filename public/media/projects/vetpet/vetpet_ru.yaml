@@ -48,6 +48,8 @@ blocks:
       - 'Личный кабинет — записи, история, купленные абонементы'
       - 'Блог — ветеринарные статьи'
 
+  - type: divider
+
   - type: image
     title: "Старый дизайн сайта"
     src: /media/projects/vetpet/old_design.png
