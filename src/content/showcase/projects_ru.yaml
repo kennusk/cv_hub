@@ -83,3 +83,20 @@ projects:
       - label: Смотреть кейс
         url: /showcase/aznm/ru
         type: product
+  
+  - slug: vetpet
+    order: 5
+    name: VetPet
+    role: Healthcare
+    year: "2025"
+    description: "Редизайн платформы для поиска ветеринаров: новая структура и навигация для подбора специалиста.​"
+    theme: blue
+    media:
+    - type: image
+      src: /media/projects/vetpet/cover.png
+      alt: "VetPet"
+      featured: true
+    links:
+      - label: Смотреть кейс
+        url: /showcase/vetpet/ru
+        type: product

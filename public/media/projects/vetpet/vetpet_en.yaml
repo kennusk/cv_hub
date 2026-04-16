@@ -1,0 +1,132 @@
+# --- /cv_hub/showcase/vipsy/ru
+
+title: "VetPet"
+blocks:
+  - type: image
+    src: /media/projects/vetpet/main.png
+    alt: "Main screen screenshot"
+
+  - type: text
+    title: "About the project"
+    body: |
+      VetPet is a platform for finding veterinarians and booking appointments. The service brings together specialists from various fields, services, and subscription plans, and also provides pet owners with useful care guides. The goal was to redesign the existing website with a focus on making it easier to find the right veterinarian for a specific need.
+
+  # - type: text
+  #   links:
+  #     - label: Behance
+  #       url: "https://www.behance.net/gallery/223476257/Elite-Samui-Responsive-Web-Design"
+
+  - type: divider
+
+# ── Текст: заголовок + подзаголовок + буллеты ───────────────────────────
+  - type: text
+    title: "Challenges"
+    bullets:
+      - "Decision complexity: pet owners don’t always know which specialist they need — the interface should assist with selection by specialty or service"
+      - "Wide range of offerings — needs clear structuring to prevent user overload"
+      - "Outdated visual language that doesn’t match a modern medical service"
+      - "Lack of transparency in services and pricing"
+  
+  - type: divider
+
+  - type: text
+    title: "Solutions"
+    bullets:
+      - "Conducted a UX audit of the existing website: identified mismatches with user expectations and issues across different user scenarios"
+      - "Redesigned navigation and structure: clear separation between specialist search, content (guides, articles), and commercial offerings (services, subscriptions)"
+      - "Designed a flow for selecting a veterinarian by specialty or service type — without requiring prior knowledge of a specific doctor"
+      - "Developed a new visual language: modern, friendly, and trust-building for pet owners"
+
+  - type: divider
+
+  - type: text
+    title: "Website structure"
+    bullets:
+      - "Home — specialist search, key specialties, popular services, subscriptions, reviews, guides, booking"
+      - "Specialties — all categories, specific specialty page"
+      - "Specialists — specialist profile (bio, specialization, services, pricing, booking)"
+      - "User account — appointments, history, purchased subscriptions"
+      - "Blog — veterinary articles"
+
+  - type: image
+    title: "Old website design"
+    src: /media/projects/vetpet/old_design.png
+    alt: "Old website design"
+    
+  - type: image
+    title: "Homepage (redesign)"
+    src: /media/projects/vetpet/main.png
+    alt: "Homepage (redesign)"
+
+  - type: image
+    title: "Specialist page (responsive)"
+    src: /media/projects/vetpet/spec.png
+    alt: "Specialist page (responsive)"
+
+  - type: image
+    title: "Specialties"
+    src: /media/projects/vetpet/directions.png
+    alt: "Specialties"
+
+  - type: image
+    title: "User account (services and sessions)"
+    src: /media/projects/vetpet/profile.png
+    alt: "User account (services and sessions)"
+
+  - type: image
+    title: "Profile"
+    src: /media/projects/vetpet/profile.png
+    alt: "Profile"
+
+  - type: image
+    title: "Service / subscription / guide payment"
+    src: /media/projects/vetpet/guide.png
+    alt: "Service / subscription / guide payment"
+
+  - type: image
+    title: "Design system"
+    src: /media/projects/vetpet/ds.png
+    alt: "Design system"
+
+  - type: text
+    title: "Results"
+    bullets:
+      - "Outdated interface redesigned: new structure, navigation, and visual language"
+      - "Specialist selection flow aligned with real user behavior — from need to specific doctor"
+      - "Improved transparency of services and their structure"
+   
+  - type: text
+    title: "Thanks for watching!"
+
+  - type: divider
+
+  - type: text
+    title: "Contacts"
+    links:
+      - label: Email
+        url: mailto:vkovalikova243@gmail.com
+      - label: LinkedIn
+        url: https://www.linkedin.com/in/valeria-kovalikova/
+      - label: Telegram
+        url: https://t.me/kennusk
+  
+
+
+  
+  
+
+
+
+
+      
+
+
+  
+
+
+
+
+
+
+
+
