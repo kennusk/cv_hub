@@ -3,7 +3,7 @@
 title: "VetPet"
 blocks:
   - type: image
-    src: /media/projects/vetpet/hero.png
+    src: /media/projects/vetpet/cover.png
     alt: "Main screen screenshot"
 
   - type: text
