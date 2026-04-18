@@ -1,0 +1,99 @@
+title: "Customer Intelligence Suite (CIS)"
+blocks:
+  - type: image
+    src: /media/projects/cis/cover.png
+    alt: "Main screen screenshot"
+
+  - type: text
+    title: "About"
+    body: |
+      Customer Intelligence Suite (CIS) is a SaaS platform for businesses that helps manage customer experience: collecting feedback, analyzing interactions, and making data-driven decisions. The goal was to create a website from scratch that explains a complex product and converts interest into demo requests.
+
+  - type: divider
+
+  - type: text
+    title: "Challenges"
+    bullets:
+      - "B2B product with a wide range of features"
+      - "Multiple target audiences — need to clearly communicate the platform’s value for businesses"
+      - "Primary goal — demo request"
+      - "Support for both light and dark themes: the platform must align with different corporate standards"
+
+  - type: divider
+
+  - type: text
+    title: "Solutions"
+    bullets:
+      - "Designed the website structure from scratch: from marketing pages for new users to case studies and solution sections for those in the evaluation stage"
+      - "Added a section with real clients (Ecobank, Unity Link) as social proof for a B2B audience"
+      - "Built a logic focused on product value and demo CTA"
+      - "Developed two visual styles — light and dark themes — consistent in components and typography but different in perception"
+
+  - type: divider
+
+  - type: text
+    title: "Website Structure"
+    bullets:
+      - "Home — value proposition, key platform features, demo CTA"
+      - "Solutions — industry and business use cases"
+      - "Case Studies — examples of platform usage with results"
+      - "About — mission and values"
+      - "Support — help center and documentation"
+      - "Privacy Policy — legal pages"
+
+  - type: divider
+
+  - type: image
+    title: "Main Page (Two Themes)"
+    src: /media/projects/cis/main1.png
+    alt: "Main page (two themes)"
+    
+  - type: image
+    src: /media/projects/cis/main2.png
+
+  - type: image
+    title: "Support (Responsive)"
+    src: /media/projects/cis/support.png
+    alt: "Support (responsive)"
+
+  - type: image
+    title: "About (Responsive)"
+    src: /media/projects/cis/about.png
+    alt: "About (responsive)"
+
+  - type: image
+    title: "FAQ"
+    src: /media/projects/cis/faq.png
+    alt: "FAQ"
+
+  - type: image
+    title: "Ecobank"
+    src: /media/projects/cis/ecobank.png
+    alt: "Ecobank"
+
+  - type: image
+    title: "Design System"
+    src: /media/projects/cis/ds.png
+    alt: "Design system"
+
+  - type: text
+    title: "Results"
+    bullets:
+      - "A SaaS platform website was created from scratch: from research and architecture to final UI"
+      - "Structure optimized for demo conversion"
+      - "Enhanced perception of the product’s technological maturity and scalability"
+   
+  - type: text
+    title: "Thanks for watching!"
+
+  - type: divider
+
+  - type: text
+    title: "Contacts"
+    links:
+      - label: Email
+        url: mailto:vkovalikova243@gmail.com
+      - label: LinkedIn
+        url: https://www.linkedin.com/in/valeria-kovalikova/
+      - label: Telegram
+        url: https://t.me/kennusk

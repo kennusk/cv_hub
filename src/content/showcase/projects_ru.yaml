@@ -85,7 +85,7 @@ projects:
         type: product
   
   - slug: vetpet
-    order: 5
+    order: 6
     name: VetPet
     role: Healthcare
     year: "2025"
@@ -99,4 +99,21 @@ projects:
     links:
       - label: Смотреть кейс
         url: /showcase/vetpet/ru
+        type: product
+
+  - slug: cis
+    order: 7
+    name: Customer Intelligence Suite (CIS)
+    role: SaaS
+    year: "2025"
+    description: "SaaS-платформа для управления клиентским опытом: светлая и тёмная тема, структура под B2B-аудиторию.​"
+    theme: blue
+    media:
+    - type: image
+      src: /media/projects/cis/cover.png
+      alt: "VetPet"
+      featured: true
+    links:
+      - label: Смотреть кейс
+        url: /showcase/cis/ru
         type: product

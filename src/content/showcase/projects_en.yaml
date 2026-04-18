@@ -100,3 +100,20 @@ projects:
       - label: Show more
         url: /showcase/vetpet/
         type: product
+
+  - slug: cis
+    order: 7
+    name: Customer Intelligence Suite (CIS)
+    role: SaaS
+    year: "2025"
+    description: "SaaS platform for customer experience management: light and dark themes, structured for a B2B audience.​"
+    theme: blue
+    media:
+    - type: image
+      src: /media/projects/cis/cover.png
+      alt: "VetPet"
+      featured: true
+    links:
+      - label: Смотреть кейс
+        url: /showcase/cis/
+        type: product
