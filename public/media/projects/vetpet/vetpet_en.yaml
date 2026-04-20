@@ -81,7 +81,7 @@ blocks:
     alt: "Profile"
 
   - type: image
-    title: "Service/Subscription/Guide payment"
+    title: "Service/subscription/guide payment"
     src: /media/projects/vetpet/guide.png
     alt: "Service/subscription/guide payment"
 
