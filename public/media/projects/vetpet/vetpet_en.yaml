@@ -77,13 +77,13 @@ blocks:
 
   - type: image
     title: "Profile"
-    src: /media/projects/vetpet/profile.png
+    src: /media/projects/vetpet/pet_profile.png
     alt: "Profile"
 
   - type: image
-    title: "Service / subscription / guide payment"
+    title: "Service/Subscription/Guide payment"
     src: /media/projects/vetpet/guide.png
-    alt: "Service / subscription / guide payment"
+    alt: "Service/subscription/guide payment"
 
   - type: image
     title: "Design system"
