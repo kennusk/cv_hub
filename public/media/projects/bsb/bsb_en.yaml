@@ -73,12 +73,12 @@ blocks:
     alt: "Business loan"
 
   - type: image
-    title: "Bank guarantee (responsive)"
+    title: "Bank guarantee (Responsive)"
     src: /media/projects/bsb/guaranties.png
     alt: "Bank guarantee responsive"
 
   - type: image
-    title: "Safe deposit boxes (responsive)"
+    title: "Safe deposit boxes (Responsive)"
     src: /media/projects/bsb/safes.png
     alt: "Safe deposit boxes responsive"
 
