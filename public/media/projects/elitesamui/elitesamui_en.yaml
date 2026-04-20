@@ -56,29 +56,29 @@ blocks:
     alt: "Home page"
     
   - type: image
-    title: "Desktop and Mobile Versions"
+    title: "Desktop and mobile versions"
     src: /media/projects/elitesamui/versions.png
     alt: "Desktop and mobile versions"
 
   - type: image
-    title: "Villas for Sale"
+    title: "Villas for sale"
     src: /media/projects/elitesamui/sell.png
     alt: "Villas for Sale"
 
   - type: image
-    title: "Villas for Rent"
+    title: "Villas for rent"
     src: /media/projects/elitesamui/rent.png
     alt: "Villas for Rent"
 
   # ── Picture with title and text on top ──────────────────────────────
   - type: image
-    title: "Project Style"
+    title: "Style guide"
     subtitle: "A clean and restrained color palette was chosen. It reflects the premium level of the villas — subtle yet conveying status. The project uses concise and visually expressive fonts carefully selected to maintain simplicity and aesthetics."
     src: /media/projects/elitesamui/ds.png
     alt: "Project style"
 
   - type: image
-    title: "Mobile Screens"
+    title: "Mobile screens"
     src: /media/projects/elitesamui/mobile.png
     alt: "Mobile screens"
 
