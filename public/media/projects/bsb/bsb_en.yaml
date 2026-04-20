@@ -53,7 +53,7 @@ blocks:
   - type: divider
 
   - type: image
-    title: "Main Pages (Individuals & Businesses)"
+    title: "Main pages (Individuals & businesses)"
     subtitle: "Introduced visual segmentation by audience: light theme for individuals and general sections, dark theme for business users. This allows users to instantly identify the relevant section without extra cognitive load."
     src: /media/projects/bsb/mpw.png
     alt: "Main pages"
@@ -63,32 +63,32 @@ blocks:
     alt: "Main pages"
 
   - type: image
-    title: "Deposits for Individuals"
+    title: "Deposits for individuals"
     src: /media/projects/bsb/phys.png
     alt: "Deposits for individuals"
 
   - type: image
-    title: "Business Loan"
+    title: "Business loan"
     src: /media/projects/bsb/credit.png
     alt: "Business loan"
 
   - type: image
-    title: "Bank Guarantee (Responsive)"
+    title: "Bank guarantee (responsive)"
     src: /media/projects/bsb/guaranties.png
     alt: "Bank guarantee responsive"
 
   - type: image
-    title: "Safe Deposit Boxes (Responsive)"
+    title: "Safe deposit boxes (responsive)"
     src: /media/projects/bsb/safes.png
     alt: "Safe deposit boxes responsive"
 
   - type: image
-    title: "Business Account"
+    title: "Business account"
     src: /media/projects/bsb/mbadapt.png
     alt: "Business account"
 
   - type: image
-    title: "Loans for Individuals"
+    title: "Loans for individuals"
     src: /media/projects/bsb/mbcredit.png
     alt: "Loans for individuals"
 
