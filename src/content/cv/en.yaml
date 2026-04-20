@@ -2,13 +2,13 @@ name: Valeria Kovalikova
 title: Product / UX/UI Designer
 
 summary: >
-  Product designer with 5+ years of experience in fintech, SaaS and mobile products.
-  Led end-to-end design cycles for banking platforms, international money transfer services
-  and an IoT security ecosystem. Specialising in zero-to-one product launches,
-  building scalable design systems and improving conversion through structural UX decisions.
+  Product-focused designer with 5+ years of experience in fintech, SaaS and mobile products.
+  Led end-to-end design cycles for banking platforms, cross-border payment services, 
+  and an IoT ecosystem. Focused on launching products, building scalable design systems, 
+  and improving conversion through clear UX decisions.
 
 contacts:
-  - label: Portfolio
+  - label: Behance
     url: https://www.behance.net/valeriiakovalikova
   - label: LinkedIn
     url: https://www.linkedin.com/in/valeria-kovalikova/
@@ -16,13 +16,6 @@ contacts:
     url: https://t.me/kennusk
   - label: Email
     url: mailto:vkovalikova243@gmail.com
-
-achievements:
-  - Led end-to-end design cycles for banking platforms, international money transfer services and an IoT security ecosystem
-  - Accelerated transition from brief to testable prototype by ~30% using AI at every stage of the process
-  - Reduced design approval cycle by 40% through user flow restructuring and scalable component implementation
-  - Reduced average task completion time by 30% via improved information architecture
-  - Built a scalable design system, cutting new feature design time by 30%
 
 skills:
   - group: Product & UX
@@ -49,7 +42,7 @@ experience:
     role: Product Designer
     period: Apr 2025 — Present
     description:
-      - Developed brand identity from scratch — logo, visual system and brand book for product and marketing consistency
+      - Developed brand identity from scratch — logo, visual system and brand guidelines for product and marketing consistency
       - Designed cross-platform security application for iOS and Android — UX architecture, onboarding, notification logic and device interaction
       - Built product SaaS website, improving value proposition clarity and user acquisition support
       - Created scalable design system (components, tokens, documentation), reducing new feature design time by 30%
@@ -60,8 +53,8 @@ experience:
     role: Product / UX/UI Designer
     period: Feb 2023 — Apr 2025
     description:
-      - Designed banking website from scratch — UX architecture and key user scenarios for financial services
-      - Designed international money transfer platform (Africa ↔ Europe), simplifying transaction flows
+      - Designed a full-scaled banking website from scratch — UX architecture and key user scenarios for financial services
+      - Led end-to-end design of a cross-border money transfer platform (Africa ↔ Europe), simplifying transaction flows
       - Contributed to Ecobank UX ecosystem improvements (mobile app, website and AOP platform), identifying systemic issues and adding new user scenarios
       - Designed SaaS website for a video verification system, combining marketing positioning with product demo for B2B clients
       - Reduced design approval cycle by 40% through user flow restructuring and scalable component implementation
@@ -82,7 +75,7 @@ experience:
     role: Product / UX/UI Designer
     period: Feb 2020 — Present
     description:
-      - Designed digital products in healthcare and mental health, including veterinary platform VetPet and psychologist-finder app Vipsy
+      - Designed digital products in healthcare and mental wellness, including veterinary platform VetPet and psychologist-finder app Vipsy
       - Built scalable UI systems for early-stage startups, enabling faster product and feature development
     stack: [Figma, Tilda, Wix, Canva]
 
