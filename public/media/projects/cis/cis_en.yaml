@@ -52,12 +52,12 @@ blocks:
     src: /media/projects/cis/main2.png
 
   - type: image
-    title: "Support (Responsive)"
+    title: "Support (responsive)"
     src: /media/projects/cis/support.png
     alt: "Support (responsive)"
 
   - type: image
-    title: "About us (Responsive)"
+    title: "About us (responsive)"
     src: /media/projects/cis/about.png
     alt: "About (responsive)"
 
