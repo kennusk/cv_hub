@@ -23,7 +23,7 @@ blocks:
     bullets:
       - 'Overloaded and confusing user flows — users need to be guided to completion without drop-offs'
       - 'Difficulty understanding fees and the final transfer amount'
-      - 'different levels of literacy among the target audience'
+      - 'Different levels of literacy among the target audience'
       - 'Low trust in online transfers, especially for international transactions — the product must convey reliability and transparency'
   
   - type: divider
@@ -39,17 +39,17 @@ blocks:
   - type: divider
 
   - type: image
-    title: "Main Pages"
+    title: "Main pages"
     src: /media/projects/unitymt/main.png
     alt: "Main screens"
     
   - type: image
-    title: "Sign Up / Login"
+    title: "Sign Up/Login"
     src: /media/projects/unitymt/auth.png
     alt: "Authentication flow"
 
   - type: image
-    title: "App Download Option"
+    title: "App download option"
     src: /media/projects/unitymt/app.png
     alt: "App download option"
 
