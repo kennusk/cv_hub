@@ -6,7 +6,7 @@ blocks:
     alt: "Main screen screenshot"
 
   - type: text
-    title: "About the Project"
+    title: "Overview"
     body: |
       Bsbank is a regional bank with over 30 years of history, serving both individuals and businesses. The website was visually and structurally outdated: it didn’t reflect brand trust or meet modern user expectations. The goal was to redesign the platform while preserving parts of the existing product structure, introducing new offerings, and rethinking content presentation and navigation.
 
@@ -39,7 +39,7 @@ blocks:
   - type: divider
 
   - type: text
-    title: "Website Structure"
+    title: "Website structure"
     bullets:
       - Section for individuals (deposits, bank cards, loans, fast payment system, registration in national identity systems, safe deposit boxes, interest rates)
       - Section for businesses (loans, guarantees, factoring, foreign trade services, business accounts, deposits, remote banking)

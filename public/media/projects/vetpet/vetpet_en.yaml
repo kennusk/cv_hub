@@ -7,7 +7,7 @@ blocks:
     alt: "Main screen screenshot"
 
   - type: text
-    title: "About the project"
+    title: "Overview"
     body: |
       VetPet is a platform for finding veterinarians and booking appointments. The service brings together specialists from various fields, services, and subscription plans, and also provides pet owners with useful care guides. The goal was to redesign the existing website with a focus on making it easier to find the right veterinarian for a specific need.
 

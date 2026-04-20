@@ -7,7 +7,7 @@ blocks:
     alt: "Main screen screenshot"
 
   - type: text
-    title: "About the Project"
+    title: "Overview"
     body: |
       Unity Money Transfer is a web platform for fast and secure money transfers between the Netherlands and several African countries. The goal of the project is to simplify international transfers by focusing on transparency, speed, and usability for different user groups (expats, families, and small businesses).
 
@@ -64,7 +64,7 @@ blocks:
 
   # ── Картинка с заголовком и текстом сверху ──────────────────────────────
   - type: image
-    title: "Design System"
+    title: "Design system"
     subtitle: "A lightweight design system was created for the project. It included reusable components such as buttons, inputs, and dropdowns, ensuring a consistent visual style across the platform. This improved development efficiency and consistency."
     src: /media/projects/unitymt/ds1.png
     alt: "Design system"

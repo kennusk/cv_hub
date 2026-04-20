@@ -5,7 +5,7 @@ blocks:
     alt: "Main screen screenshot"
 
   - type: text
-    title: "About"
+    title: "Overview"
     body: |
       Customer Intelligence Suite (CIS) is a SaaS platform for businesses that helps manage customer experience: collecting feedback, analyzing interactions, and making data-driven decisions. The goal was to create a website from scratch that explains a complex product and converts interest into demo requests.
 
@@ -32,21 +32,21 @@ blocks:
   - type: divider
 
   - type: text
-    title: "Website Structure"
+    title: "Website structure"
     bullets:
       - "Home — value proposition, key platform features, demo CTA"
       - "Solutions — industry and business use cases"
-      - "Case Studies — examples of platform usage with results"
+      - "Case studies — examples of platform usage with results"
       - "About — mission and values"
       - "Support — help center and documentation"
-      - "Privacy Policy — legal pages"
+      - "Privacy policy — legal pages"
 
   - type: divider
 
   - type: image
-    title: "Main Page (Two Themes)"
+    title: "Homepage (two modes)"
     src: /media/projects/cis/main1.png
-    alt: "Main page (two themes)"
+    alt: "Homepage (two modes)"
     
   - type: image
     src: /media/projects/cis/main2.png
@@ -57,7 +57,7 @@ blocks:
     alt: "Support (responsive)"
 
   - type: image
-    title: "About (Responsive)"
+    title: "About us (Responsive)"
     src: /media/projects/cis/about.png
     alt: "About (responsive)"
 
@@ -72,7 +72,7 @@ blocks:
     alt: "Ecobank"
 
   - type: image
-    title: "Design System"
+    title: "Design system"
     src: /media/projects/cis/ds.png
     alt: "Design system"
 

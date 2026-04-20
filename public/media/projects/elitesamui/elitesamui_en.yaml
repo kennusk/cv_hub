@@ -7,7 +7,7 @@ blocks:
     alt: "Screenshot of the main screen"
 
   - type: text
-    title: "About the Project"
+    title: "Overview"
     body: |
       Elite Samui is a website for a premium villa rental and sales service on the island of Samui, Thailand. The main goal is to present properties as a desirable and attainable lifestyle product and to simplify the search and booking/purchase process for an international audience.
 
@@ -40,7 +40,7 @@ blocks:
   - type: divider
 
   - type: text
-    title: "Website Structure"
+    title: "Website structure"
     bullets:
       - 'Home'    
       - 'Villas for Sale'

@@ -6,7 +6,7 @@ blocks:
     alt: "Main screen screenshot"
 
   - type: text
-    title: "About the project"
+    title: "Overview"
     body: |
       AZN Meeting is a video identity verification platform for businesses. The service enables companies to verify clients online without requiring an in-person visit, with support for AI and machine learning. The goal was to create a landing page from scratch that explains a complex product in simple terms and converts interest into demo requests.
 

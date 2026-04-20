@@ -7,7 +7,7 @@ blocks:
     alt: "Main screen screenshot"
 
   - type: text
-    title: "About the Project"
+    title: "Overview"
     body: |
       Vipsy is a mobile app for finding a therapist and selecting a therapy approach. The product helps users not only find a specialist, but also understand which approach suits them. The goal is to guide a user from a vague “I need help” state to a confirmed booking with the right specialist.
 
@@ -40,12 +40,12 @@ blocks:
   - type: divider
 
   - type: image
-    title: "Onboarding Screens"
+    title: "Onboarding screens"
     src: /media/projects/vipsy/starting_screens.png
     alt: "Onboarding screens"
     
   - type: image
-    title: "Authentication Flow"
+    title: "Authentication flow"
     src: /media/projects/vipsy/auth_flow.png
     alt: "Authentication flow"
 
@@ -55,25 +55,25 @@ blocks:
     alt: "Account"
 
   - type: image
-    title: "Therapy Types & Specialists"
+    title: "Therapy types & specialists"
     src: /media/projects/vipsy/specs.png
     alt: "Therapy types and specialists"
 
   # ── Картинка с заголовком и текстом сверху ──────────────────────────────
   - type: image
-    title: "Booking a Session"
+    title: "Booking a session"
     subtitle: "Flexible booking flow: users can pick a time immediately or proceed without selecting a time and return to the schedule later. This lowers the entry barrier and retains users who aren’t ready to commit to a specific date."
     src: /media/projects/vipsy/record.png
     alt: "Booking a session"
 
   - type: image
-    title: "Purchase a Service"
+    title: "Purchase a service"
     subtitle: "Multiple scenarios are supported: purchase without selecting a time and book later, or choose a specialist and a convenient slot immediately. Subscriptions are purchased without time selection, then activated in the account, after which users schedule sessions themselves."
     src: /media/projects/vipsy/buy.png
     alt: "Purchase a service"
 
   - type: image
-    title: "My Services"
+    title: "My services"
     subtitle: "All purchased services are split into active and archived. From active services, users can book a session if time wasn’t selected during purchase. Rescheduling, cancellation, and subscription activation are available. All session management is centralized in one place."
     src: /media/projects/vipsy/serv.png
     alt: "My services"
