@@ -38,7 +38,7 @@ blocks:
     alt: "Landing page"
 
   - type: image
-    title: "Application form (Desktop and mobile versions)"
+    title: "Application form (desktop and mobile versions)"
     src: /media/projects/aznm/form.png
     alt: "Application form (desktop and mobile versions)"
 
