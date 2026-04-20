@@ -4,7 +4,7 @@ projects:
     name: Vipsy
     role: Healthcare
     year: "2025"
-    description: "Mobile app for selecting a psychologist: from choosing the therapy direction to booking a specialist and payment."
+    description: "Mobile app for selecting a psychologist: from choosing the therapy direction to effortless specialist booking and payment."
     theme: blue
     media:
     - type: image
@@ -34,7 +34,7 @@ projects:
         type: product
 
   - slug: unitymt
-    order: 3
+    order: 5
     name: Unity Money Transfer
     role: Fintech
     year: "2024"
@@ -51,7 +51,7 @@ projects:
         type: product
 
   - slug: elitesamui
-    order: 4
+    order: 6
     name: Elite Samui
     role: Estate
     year: "2024"
@@ -68,7 +68,7 @@ projects:
         type: product
 
   - slug: aznm
-    order: 5
+    order: 7
     name: AZN Meeting
     role: Fintech
     year: "2023"
@@ -85,11 +85,11 @@ projects:
         type: product
 
   - slug: vetpet
-    order: 6
+    order: 3
     name: VetPet
     role: Healthcare
     year: "2025"
-    description: "Redesign of a veterinary search platform: new structure and navigation for specialist selection.​"
+    description: "Redesign of a veterinary search platform: new information architecture, structure and navigation for specialist selection.​"
     theme: blue
     media:
     - type: image
@@ -99,4 +99,21 @@ projects:
     links:
       - label: Show more
         url: /showcase/vetpet/
+        type: product
+
+  - slug: cis
+    order: 4
+    name: Customer Intelligence Suite (CIS)
+    role: SaaS
+    year: "2025"
+    description: "SaaS platform for customer experience management: light and dark themes, structured for a B2B audience.​"
+    theme: blue
+    media:
+    - type: image
+      src: /media/projects/cis/cover.png
+      alt: "VetPet"
+      featured: true
+    links:
+      - label: Show more
+        url: /showcase/cis/
         type: product
