@@ -71,7 +71,7 @@ blocks:
 
   - type: image
     title: "Профиль"
-    src: /media/projects/vetpet/profile.png
+    src: /media/projects/vetpet/pet_profile.png
     alt: "Профиль"
 
 
