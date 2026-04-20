@@ -72,10 +72,10 @@ blocks:
 
   # ── Picture with title and text on top ──────────────────────────────
   - type: image
-    title: "Style guide"
+    title: "Styleguide"
     subtitle: "A clean and restrained color palette was chosen. It reflects the premium level of the villas — subtle yet conveying status. The project uses concise and visually expressive fonts carefully selected to maintain simplicity and aesthetics."
     src: /media/projects/elitesamui/ds.png
-    alt: "Project style"
+    alt: "styleguide"
 
   - type: image
     title: "Mobile screens"
