@@ -70,35 +70,39 @@ const skillGroups = rawSkills
       <aside class="sidebar">
 
         {/* 1. Download */}
-        <article class="card card--downloads">
+        <section class="section section--downloads">
           <h2 class="h2">{t.downloads}</h2>
-          <div class="btnrow" aria-label={t.downloads}>
-            <a class="btn btn--ghost" href={pdfUrl}  download>{t.pdf}</a>
-            <a class="btn btn--ghost" href={docxUrl} download>{t.docx}</a>
-            <a class="btn btn--ghost" href={txtUrl}  download>{t.txt}</a>
-          </div>
-        </article>
+          <article class="card card--downloads">
+            <div class="btnrow" aria-label={t.downloads}>
+              <a class="btn btn--ghost" href={pdfUrl}  download>{t.pdf}</a>
+              <a class="btn btn--ghost" href={docxUrl} download>{t.docx}</a>
+              <a class="btn btn--ghost" href={txtUrl}  download>{t.txt}</a>
+            </div>
+          </article>
+        </section>
 
         {/* 2. Skills */}
-        <article class="card card--skills">
+        <section class="section section--skills">
           <h2 class="h2">{t.skills}</h2>
-          {skillGroups.length > 0 ? (
-            <div class="skillsgrid">
-              {skillGroups.map((g) => (
-                <div class="skillsgroup">
-                  {g.group && <div class="skillsgroup__title">{g.group}</div>}
-                  <ul class="tags">
-                    {g.items.map((s) => <li class="tag">{s}</li>)}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p class="muted">
-              {t.empty_skills}
-            </p>
-          )}
-        </article>
+          <article class="card card--skills">
+            {skillGroups.length > 0 ? (
+              <div class="skillsgrid">
+                {skillGroups.map((g) => (
+                  <div class="skillsgroup">
+                    {g.group && <div class="skillsgroup__title">{g.group}</div>}
+                    <ul class="tags">
+                      {g.items.map((s) => <li class="tag">{s}</li>)}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p class="muted">
+                {t.empty_skills}
+              </p>
+            )}
+          </article>
+        </section>
 
       </aside>
 
@@ -106,33 +110,32 @@ const skillGroups = rawSkills
       <main class="main-content">
 
         {/* 1. Hero */}
-        <div class="card hero">
-          <div class="hero__top">
-            <div>
-              <h1 class="hero__name">{data?.name ?? t.nameFallback}</h1>
-              {data?.title   && <p class="hero__title">{data.title}</p>}
-              {data?.summary && <p class="hero__summary">{data.summary}</p>}
-            </div>
-          </div>
+        <section class="section section--hero">
+          <h1 class="hero__name">{data?.name ?? t.nameFallback}</h1>
+          
+          <div class="card hero">
+            {data?.title && <p class="hero__title">{data.title}</p>}
+            {data?.summary && <p class="hero__summary">{data.summary}</p>}
 
-          {contacts.length > 0 && (
-            <div class="hero__contacts">
-              <div class="section__title">{t.contacts}</div>
-              <div class="pillrow">
-                {contacts.map((c) => (
-                  <a
-                    class="pill"
-                    href={c.url}
-                    target={c.url?.startsWith('mailto:') ? undefined : '_blank'}
-                    rel={c.url?.startsWith('mailto:')    ? undefined : 'noopener'}
-                  >
-                    {c.label}
-                  </a>
-                ))}
+            {contacts.length > 0 && (
+              <div class="hero__contacts">
+                <div class="section__title">{t.contacts}</div>
+                <div class="pillrow">
+                  {contacts.map((c) => (
+                    <a
+                      class="pill"
+                      href={c.url}
+                      target={c.url?.startsWith('mailto:') ? undefined : '_blank'}
+                      rel={c.url?.startsWith('mailto:')    ? undefined : 'noopener'}
+                    >
+                      {c.label}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        </section>
 
         
 
