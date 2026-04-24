@@ -73,7 +73,7 @@
    ───────────────────────────────────────────────────────────────────────────── */
 
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html, body { min-height: 100%; }
 
 body {
   margin: 0;
@@ -379,12 +379,12 @@ a:hover { text-decoration: underline; }
     display: contents;
   }
 
-  .card--downloads   { order: 1; }
-  .card.hero         { order: 2; }
-  .card--achievements{ order: 3; }
+  .section--downloads  { order: 1; }
+  .section--hero       { order: 2; }
+  .card--achievements  { order: 3; }
   .section--experience { order: 4; }
-  .card--skills      { order: 5; }
-  .section--education { order: 6; }
+  .section--skills     { order: 5; }
+  .section--education  { order: 6; }
 }
 
 
