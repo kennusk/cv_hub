@@ -26,3 +26,4 @@ pnpm-debug.log*
 *.pdf
 *.txt
 /public/cv
+.claude
