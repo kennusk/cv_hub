@@ -1,12 +1,19 @@
 //
-//  config.ts
+//  content.config.ts
 //  CV Hub
+//
+//  Migrated from src/content/config.ts (Astro 5 legacy `type: 'data'`
+//  collections) to Astro 6+ loader-based collections. Each collection here
+//  is a flat folder of standalone YAML files — one file, one entry, id =
+//  filename without extension — which is exactly what glob() with a
+//  wildcard pattern reproduces.
 //
 //  Created by Alexander Gusarov on 03.03.2026.
 //  @spartan121
 //
 
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 /**
  * NOTE:
@@ -52,7 +59,7 @@ const cvLanguageSchema = z.object({
 });
 
 const cv = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*.{yaml,yml}', base: './src/content/cv' }),
   schema: z.object({
     name: z.string().optional().default(''),
     title: z.string().optional().default(''),
@@ -123,7 +130,7 @@ const showcaseProjectSchema = z.object({
 }).passthrough();
 
 const showcase = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*.{yaml,yml}', base: './src/content/showcase' }),
   schema: z.object({
     projects: z.array(showcaseProjectSchema).optional().default([]),
   }),
@@ -140,7 +147,7 @@ const changelogEntrySchema = z.object({
 });
 
 const changelog = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*.{yaml,yml}', base: './src/content/changelog' }),
   schema: z.object({
     changelog: z.array(changelogEntrySchema),
   }),
@@ -148,7 +155,7 @@ const changelog = defineCollection({
 
 // Profiles
 const profiles = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*.{yaml,yml}', base: './src/content/profiles' }),
   schema: z.object({
     profiles: z.array(z.object({
       id: z.string(),
@@ -161,7 +168,7 @@ const profiles = defineCollection({
 
 // Languages
 const languages = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*.{yaml,yml}', base: './src/content/languages' }),
   schema: z.object({
     default: z.string(),
     languages: z.array(z.object({
@@ -175,13 +182,41 @@ const languages = defineCollection({
 const translationValueSchema = z.record(z.string());
 
 const i18n = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '*.{yaml,yml}', base: './src/content/i18n' }),
   schema: z.object({
     nav: z.record(translationValueSchema).optional().default({}),
     cv: z.record(translationValueSchema).optional().default({}),
     showcase: z.record(translationValueSchema).optional().default({}),
     changelog: z.record(translationValueSchema).optional().default({}),
+    notfound404: z.record(translationValueSchema).optional().default({}),
     meta: z.record(translationValueSchema).optional().default({}),
+  }),
+});
+
+// Site — deployment-wide settings, not tied to any profile or language.
+// Grows over time (analytics opt-in, "open to work" status, footer credit
+// toggle, ...); `downloads` is the first field. See docs/INFO.md.
+const downloadFormat = z.enum(['pdf', 'pdfAts', 'docx', 'txt']);
+
+const site = defineCollection({
+  loader: glob({ pattern: '*.{yaml,yml}', base: './src/content/site' }),
+  schema: z.object({
+    // Flat = one implicit ungrouped bucket: downloads: [pdf, docx].
+    // Grouped = a labeled section per audience — required as soon as two
+    // entries would render the same button label (e.g. pdf + pdfAts both
+    // show "PDF"); see docs/INFO.md §17 for the convention.
+    downloads: z.union([
+      z.array(downloadFormat),
+      z.array(z.object({
+        group: z.string().nullable().optional().default(null),
+        items: z.array(downloadFormat),
+      })),
+    ]).optional().default(['pdf', 'docx']),
+    // Opt-out "Made with CV Hub" footer credit, next to the GitHub link —
+    // always points at the upstream project (not GITHUB_REPOSITORY, unlike
+    // the rest of the footer), so every deployed fork stays a discoverable
+    // backlink. On by default; set to false to remove it.
+    footerCredit: z.boolean().optional().default(true),
   }),
 });
 
@@ -192,4 +227,5 @@ export const collections = {
   profiles,
   languages,
   i18n,
+  site,
 };

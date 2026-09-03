@@ -1,6 +1,9 @@
 /**
  * resume-import-json.mjs
  *
+ * Created by Alexander Gusarov on 04.03.2026.
+ * @spartan121
+ *
  * Usage:
  *   npm run resume:import -- resume.json en
  *
@@ -19,7 +22,7 @@ import addFormats from 'ajv-formats';
 const args = process.argv.slice(2);
 
 if (args.length < 2) {
-  console.error('Usage: npm run convert -- <resume.json> <lang>');
+  console.error('Usage: npm run resume:import -- <resume.json> <lang>');
   process.exit(1);
 }
 

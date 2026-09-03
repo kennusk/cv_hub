@@ -4,7 +4,10 @@
 // CV Hub
 // Updated to support extended showcase schema
 //
-const { project, t: tProp = {} } = Astro.props;
+// Created by Alexander Gusarov on 03.03.2026.
+// @spartan121
+//
+const { project, t: tProp = {}, eager = false } = Astro.props;
 
 const t = {
   platforms: tProp.platforms ?? 'Platforms',
@@ -96,7 +99,9 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
             <video
               class="media__el"
               src={withBase(featuredMedia.src)}
-              controls
+              autoplay
+              muted
+              loop
               playsinline
               preload="metadata"
             ></video>
@@ -107,7 +112,8 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
               class="media__el"
               src={withBase(featuredMedia.src)}
               alt={featuredMedia.alt ?? ''}
-              loading="eager"
+              loading={eager ? 'eager' : 'lazy'}
+              fetchpriority={eager ? 'high' : undefined}
               onerror="this.closest('.media')?.remove();"
             />
           )}
@@ -127,7 +133,7 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
                       class="thumb__img"
                       src={withBase(m.src)}
                       alt={m.alt ?? ''}
-                      loading="eager"
+                      loading="lazy"
                       onerror="this.closest('.thumb')?.remove();"
                     />
                   )}
@@ -251,7 +257,9 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
           <video
             class="media__el"
             src={withBase(featuredMedia.src)}
-            controls
+            autoplay
+            muted
+            loop
             playsinline
             preload="metadata"
           ></video>
@@ -262,7 +270,8 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
             class="media__el"
             src={withBase(featuredMedia.src)}
             alt={featuredMedia.alt ?? ''}
-            loading="eager"
+            loading={eager ? 'eager' : 'lazy'}
+            fetchpriority={eager ? 'high' : undefined}
             onerror="this.closest('.media')?.remove();"
           />
         )}
@@ -282,7 +291,7 @@ const accentStyle = accent ? `--card-accent: ${accent};` : '';
                     class="thumb__img"
                     src={withBase(m.src)}
                     alt={m.alt ?? ''}
-                    loading="eager"
+                    loading="lazy"
                     onerror="this.closest('.thumb')?.remove();"
                   />
                 )}

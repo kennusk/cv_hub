@@ -226,6 +226,8 @@ astro build             # статический сайт
 
 Добавление нового профиля или языка автоматически добавляет новые файлы документов без изменений в скриптах — они итерируются по `public/cv/` динамически.
 
+**PDF и браузер.** `resume-export-pdf.mjs` использует Node-API Playwright, но бинарь браузера зависит от окружения: на CI (`process.env.CI`) запускается **предустановленный Google Chrome раннера** через `channel: 'chrome'` — браузер не качается, что убирает зависания загрузки с `cdn.playwright.dev`. Локально — штатный bundled chromium Playwright.
+
 ---
 
 ## 7. DevOps-подход
@@ -243,21 +245,42 @@ astro build             # статический сайт
 
 ## 8. CI / GitHub Actions
 
+Три воркфлоу поверх одного и того же пайплайна:
+
+| Воркфлоу | Триггер | Что делает |
+|---|---|---|
+| `ci.yml` | pull request | Полный пайплайн генерации + выгрузка резюме, OG-картинки и сайта как артефактов. Ничего не деплоит. |
+| `deploy.yml` | push в `main` | Тот же пайплайн → GitHub Pages → уведомление в Telegram |
+| `release.yml` | публикация релиза | Перегенерирует документы и прикладывает PDF/DOCX/TXT к релизу (без `astro build` — релизу нужны только документы) |
+
+Стадии пайплайна идут отдельными именованными шагами, а не одним непрозрачным `npm run build`: в Actions видно тайминг каждой стадии и точную точку падения.
+
+**Почему стадии — шаги, а не отдельные джобы.** Стадии строго последовательны и передают данные через файловую систему (`public/cv` → `public/downloads` → `dist`). Отдельные джобы означали бы новый раннер, повторные checkout и `npm ci`, плюс upload/download артефактов между ними — при нулевом выигрыше в параллельности. По джобам разделено то, что действительно требует разного контекста: `build` / `deploy` (нужен `environment` + `id-token`) / `notify_telegram` (`if: always()`).
+
 ```
-push → main
+push → main  (runner: Node 24)
   ↓
 npm ci
   ↓
-playwright install chromium
+verify chrome (системный Google Chrome раннера — без загрузки браузера)
   ↓
 npm run build
   ├── cv:build          → public/cv/*.yaml
   ├── resume:generate   → DOCX + TXT
   ├── resume:pdf        → PDF
-  └── astro build       → статический сайт
+  ├── astro build       → статический сайт + sitemap-index.xml
+  └── og:generate       → public/media/og-image-{lang}.png + dist/media/og-image-{lang}.png
   ↓
 upload artifact → deploy → GitHub Pages
+  ↓
+notify_telegram (always, даже при падении build)
+  └── отправляет статус + ветку + short SHA в TG-бот
+      secrets: PIPLINE_BOT_SECRET, CHAT_ID — через env-блок,
+        а не inline ${{ }} в shell
+      если секреты не настроены — шаг пропускается молча
 ```
+
+**OG-image пайплайн.** `src/scripts/generate-og-image.mjs` скриншотит по одному роуту `/og-preview/{lang}` на каждый настроенный язык (`getStaticPaths()`, `src/pages/og-preview/[lang].astro`) — каждый рендерит реальный CV дефолтного профиля из `public/cv/{lang}.yaml` (тот же файл, что читает `index.astro`; фоллбэк на `docs/examples/example_cv.yaml` только если этого файла ещё нет) — тем же паттерном Playwright/Chrome, что и генерация PDF. Одна картинка на язык, не на профиль и не на кейс: каждая страница подбирает свою OG-картинку по своему `lang` (`Layout.astro`), так что `/devops` или страница кейса просто переиспользует картинку дефолтного профиля того же языка вместо отдельного скриншота. Каждый сырой скриншот компонуется в рамку с обоями 1200×630 на второй headless-странице, используя вычисленные CSS-переменные самой страницы (`--accent`, `--bg` и т.д., извлекаются один раз и переиспользуются для всех языков — токены темы не зависят от контента CV) — обои всегда совпадают с запрошенной темой, без хардкода цветов. `--theme=<name>` выбирает тему (фоллбэк на дефолтный вид, если тема неизвестна); `--wallpaper=gradient|<путь к изображению>` переключает между градиентом из токенов и статичной картинкой. Работает последней стадией `npm run build`; файлы `og-image-{lang}.png` перегенерируются каждый билд и лежат в `.gitignore` — это build output, как `sitemap-index.xml`, а не исходники. Роуты `/og-preview/*` исключены из sitemap (`astro.config.mjs`) и удаляются скриптом из `dist/` сразу после скриншотов — в продакшн никогда не попадают.
 
 ---
 
@@ -271,24 +294,43 @@ upload artifact → deploy → GitHub Pages
 
 ---
 
-## 10. Расширяемость
+## 10. Фоновые компоненты
+
+Взаимозаменяемые canvas/CSS-фоны. Подключаются в `Layout.astro` вместо друг друга:
+
+| Компонент | Тип | Props | Особенности |
+|---|---|---|---|
+| `AnimatedBackground` | CSS-only | нет | 4 blur-орба, theme-aware, без JS |
+| `GalaxyBackground` | Canvas RAF | 4 | Спиральная галактика, mouse parallax, 3 слоя |
+| `PlayStationWaves` | Canvas RAF | 18 | XMB заливочные волны, time-of-day hue |
+| `WaveLines` | Canvas RAF | 18 | XMB световые линии, offscreen glow compositing |
+
+Полный справочник по всем параметрам — `docs/BKG_INFO.md`.
+
+---
+
+## 11. Расширяемость
 
 Реализовано:
 - Multi-profile система — N профилей × N языков из одного YAML
-- URL-based theme switching
-- Changelog страница
+- URL-based theme switching (`?theme=name`)
+- Changelog страница (YAML → Astro render)
 - Динамический siteUrl — форки работают без конфига
-- Case Study страницы — блочная система контента
+- Case Study страницы — блочная система контента (`text`, `image`, `divider`)
+- Сменные фоновые компоненты — 4 варианта, подключение в одну строку
+- Telegram-уведомления CI — опционально, через GitHub Secrets
+- MIT LICENSE, ARCHITECTURE.md, CHANGELOG.md — репа готова к публичному использованию
 
 Возможные улучшения:
 - Валидация схемы YAML через Zod
 - Фильтрация проектов по тегам на Showcase
 - Lighthouse CI
 - Permalink-компонент на страницах кейс стади
+- `prefers-reduced-motion` для GalaxyBackground
 
 ---
 
-## 11. Метрики
+## 12. Метрики
 
 Текущий Lighthouse (production):
 
@@ -303,7 +345,7 @@ Best Practices 96 — ограничение GitHub Pages: CSP-заголовк�
 
 ---
 
-## 12. Философия
+## 13. Философия
 
 Резюме не должно быть статичным PDF, застывшим во времени.
 

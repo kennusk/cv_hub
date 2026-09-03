@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: "24"
           cache: "npm"
@@ -32,14 +32,36 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright Chromium
-        run: npx playwright install chromium --with-deps
+      # PDF export drives the runner's preinstalled Google Chrome via Playwright
+      # (channel: 'chrome' in resume-export-pdf.mjs when CI=true) — no browser
+      # download, which avoids the cdn.playwright.dev stalls. This just fails
+      # fast with a clear message if Chrome is ever missing from the image.
+      - name: Verify Chrome is available
+        run: google-chrome --version
+
+      # `npm run build` runs all five stages; they are split here into named
+      # steps (same runner, same filesystem — zero cost) so the Actions UI shows
+      # per-stage timing and points at the exact stage that failed.
+      - name: Merge CV data
+        run: npm run cv:build
+
+      - name: Generate DOCX + TXT
+        run: npm run resume:generate
+
+      - name: Render PDFs
+        run: npm run resume:pdf
 
       - name: Build Astro site
-        run: npm run build
+        run: npx astro build
+
+      # Screenshots /og-preview (sample CV, docs/examples/example_cv.yaml)
+      # through Playwright and composites a framed, wallpapered 1200×630 card
+      # — regenerated every deploy, never committed (see .gitignore).
+      - name: Generate OG image
+        run: npm run og:generate
 
       - name: Upload build artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -53,17 +75,46 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
   notify_telegram:
-    needs: deploy
+    needs: [build, deploy]
+    if: always()
     runs-on: ubuntu-latest
 
     steps:
-      - name: Notify Telegram (success)
-        if: success()
-        run: curl -s -X POST "https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage" -d chat_id="${{ secrets.CHAT_ID }}" -d text="@${{ github.actor }}%0A✅ Deployment succeeded!%0AVisit the site:%0Ahttps://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+      - name: Notify Telegram
+        env:
+          BOT_TOKEN:     ${{ secrets.PIPLINE_BOT_SECRET }}
+          CHAT_ID:       ${{ secrets.CHAT_ID }}
+          BUILD_STATUS:  ${{ needs.build.result }}
+          DEPLOY_STATUS: ${{ needs.deploy.result }}
+          ACTOR:         ${{ github.actor }}
+          BRANCH:        ${{ github.ref_name }}
+          SHA:           ${{ github.sha }}
+          OWNER:         ${{ github.repository_owner }}
+          REPO_NAME:     ${{ github.event.repository.name }}
+        run: |
+          if [ -z "$BOT_TOKEN" ] || [ -z "$CHAT_ID" ]; then
+            echo "No telegram secrets, skipping notification"
+            exit 0
+          fi
 
-      - name: Notify Telegram (failure)
-        if: failure()
-        run: curl -s -X POST "https://api.telegram.org/bot${{ secrets.PIPLINE_BOT_SECRET }}/sendMessage" -d chat_id="${{ secrets.CHAT_ID }}" -d text="@${{ github.actor }}%0A❌ Deployment failed!"
+          SHORT_SHA="${SHA:0:7}"
+
+          if [ "$BUILD_STATUS" = "cancelled" ] || [ "$DEPLOY_STATUS" = "cancelled" ]; then
+            echo "Run was superseded by a newer push (concurrency cancel-in-progress), skipping notification"
+            exit 0
+          fi
+
+          if [ "$BUILD_STATUS" = "success" ] && [ "$DEPLOY_STATUS" = "success" ]; then
+            TEXT="@${ACTOR}%0A✅ Deployed successfully!%0ABranch: ${BRANCH}%0ACommit: ${SHORT_SHA}%0A🌐 https://${OWNER}.github.io/${REPO_NAME}/"
+          elif [ "$BUILD_STATUS" != "success" ]; then
+            TEXT="@${ACTOR}%0A❌ Build failed!%0ABranch: ${BRANCH}%0ACommit: ${SHORT_SHA}"
+          else
+            TEXT="@${ACTOR}%0A❌ Deploy failed!%0ABranch: ${BRANCH}%0ACommit: ${SHORT_SHA}"
+          fi
+
+          curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+            -d chat_id="${CHAT_ID}" \
+            -d text="$TEXT"

@@ -1,6 +1,6 @@
 # CV Hub — Showcase project entry example
 #
-# Добавляется в src/content/showcase/projects.yaml
+# Добавляется в src/content/showcase/projects_{lang}.yaml
 # в массив projects:
 
 - slug: my-project          # имя папки в public/media/projects/

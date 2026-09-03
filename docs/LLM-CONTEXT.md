@@ -22,7 +22,7 @@ CV Hub is a static personal website and resume system built with Astro and YAML.
 
 Core concept: **Resume as Code**. One YAML file is the single source of truth. Everything else — website, PDF, DOCX, TXT, multiple language versions, multiple role-specific profiles — is generated from it automatically.
 
-**Stack:** Astro (static), YAML (data), TypeScript, GitHub Actions (CI/CD), GitHub Pages (hosting). Zero client-side JS by default.
+**Stack:** Astro 7 (static, Content Layer), YAML (data), TypeScript, GitHub Actions (CI/CD), GitHub Pages (hosting). Zero client-side JS by default.
 
 ---
 
@@ -30,6 +30,7 @@ Core concept: **Resume as Code**. One YAML file is the single source of truth. E
 
 ```
 src/
+  content.config.ts        # collection schemas + Content Layer glob() loaders
   content/
     cv/
       en.yaml              # base CV in English
@@ -45,7 +46,8 @@ src/
     i18n/
       translations.yaml    # all UI strings for all languages
     showcase/
-      projects.yaml        # showcase project list
+      projects_en.yaml     # showcase project list (English)
+      projects_ru.yaml     # showcase project list (Russian)
     changelog/
       changelog.yaml       # version history
   pages/
@@ -56,12 +58,16 @@ src/
       [...rest].astro      # showcase list non-default lang + case study pages
     changelog.astro
     404.astro
+    og-preview.astro       # screenshot target for the OG-image pipeline (sample data, excluded from sitemap)
   components/
-    Layout.astro           # shared layout: header, nav, lang switcher, footer
+    Layout.astro           # shared layout: header, nav (JS dropdown), lang switcher, footer
     HomePage.astro         # CV page renderer
-    ProjectCard.astro      # showcase project card (featured + archived modes)
-    ProjectPage.astro      # case study page template
-    AnimatedBackground.astro
+    ProjectCard.astro      # showcase project card (featured + archived modes; first image-cover card is eager/LCP)
+    ProjectPage.astro      # case study page template (+ click-to-zoom image lightbox)
+    AnimatedBackground.astro  # default CSS background
+    GalaxyBackground.astro    # canvas starfield (alternative)
+    PlayStationWaves.astro    # canvas XMB filled waves (alternative)
+    WaveLines.astro           # canvas XMB glow lines (alternative)
     blocks/
       TextBlock.astro      # case study text block
       ImageBlock.astro     # case study image block
@@ -72,6 +78,7 @@ src/
     resume-export-pdf.mjs  # PDF generator via Playwright
     resume-import-json.mjs # JSON Resume → YAML converter
     resume-import-linkedin.mjs
+    generate-og-image.mjs  # screenshots og-preview.astro, composites the 1200x630 OG card
   styles/
     global.css             # all styles + CSS design tokens
     themes/                # frosted, light, nordic, peachy
@@ -95,8 +102,8 @@ public/
 docs/
   INFO.md                  # data structure reference
   ENGINEERING.md           # architecture decisions
-  BKG_INFO.md              # AnimatedBackground docs
-  llm-context.md           # this file
+  BKG_INFO.md              # all background components — props, tuning, previews
+  LLM-CONTEXT.md           # this file
   examples/
     example_cv.yaml        # full CV YAML example
     example_cv.json        # JSON Resume example
@@ -178,7 +185,7 @@ profiles:
     spec: devops   # reads en_devops.yaml, ru_devops.yaml
 ```
 
-`slug` = URL segment. `spec` = delta filename prefix. They can differ.
+`slug` = URL segment. `spec` = delta filename prefix. **They must be equal** — routing keys on `slug`, while CV files and download links key on `spec`. `merge.mjs` enforces `slug === spec` with a fail-fast guard (both empty/null for the default profile); if they diverge the profile page silently desyncs from its CV and downloads.
 
 If `profiles.yml` is missing — graceful fallback to single default profile.
 
@@ -265,7 +272,9 @@ All styles in `src/styles/global.css`. Token-based via CSS custom properties in 
 
 ## Showcase and case studies
 
-### Project list (`src/content/showcase/projects.yaml`)
+### Project list (`src/content/showcase/projects_{lang}.yaml`)
+
+One file per language (`projects_en.yaml`, `projects_ru.yaml`). Keep the slug set and `order` values in sync across languages. `order` must be unique within a list (duplicate orders fall back to an alphabetical tiebreak and reorder unexpectedly).
 
 Each entry:
 ```yaml
@@ -360,7 +369,7 @@ blocks:
     caption: "Caption text under image"
 ```
 
-Block types: `text`, `image`, `divider`. All fields in `text` and `image` blocks are optional — render only what's present.
+Block types: `text`, `image`, `video`, `divider`. All fields are optional (except `src` on `image`/`video`) — render only what's present. A `video` block with `loop: true` autoplays muted and looped (short ambient clips); otherwise it shows controls + an optional `poster`.
 
 ---
 
@@ -396,7 +405,7 @@ No changes to any `.astro` file needed.
 
 ## How to add a project to showcase
 
-Add an entry to `src/content/showcase/projects.yaml`. That's it.
+Add an entry to `src/content/showcase/projects_{lang}.yaml` (one file per language; keep slug and `order` in sync across them). That's it.
 
 To link a project card to its case study:
 ```yaml
@@ -421,6 +430,10 @@ npm run build
 
 Output naming: `resume_{lang}[_{spec}].{ext}`
 Examples: `resume_ru.pdf`, `resume_en_devops.docx`
+
+**PDF browser:** `resume-export-pdf.mjs` drives Playwright. On CI (`process.env.CI`) it launches the runner's preinstalled Google Chrome via `channel: 'chrome'` — no browser download (avoids `cdn.playwright.dev` stalls). Locally it uses Playwright's bundled chromium. The CI workflow has no `playwright install` step; it just verifies `google-chrome` is present.
+
+**OG image:** `npm run og:generate` (last stage of `npm run build`) screenshots `/og-preview/{lang}` (one static route per configured language, real default-profile CV from `public/cv/{lang}.yaml`) via the same Playwright pattern, then composites a framed 1200×630 card per language on a wallpaper matching the active theme's own CSS tokens. `--theme=<name>` and `--wallpaper=gradient|<path>` are optional flags. `public/media/og-image-{lang}.png` files are gitignored — regenerated every build, not committed source files. Every page picks its OG image by its own `lang` (`Layout.astro`) — one image per language, not per profile or case study.
 
 ---
 
@@ -496,6 +509,10 @@ Save output as `src/content/cv/{lang}.yaml`.
 - **`showcaseHref` must include lang** — it's built in `Layout.astro`, not hardcoded
 - **Profiles without `profiles.yml`** work fine — graceful fallback
 - **Adding a language or profile** requires no changes to `.astro` files — only YAML and config
+- **`profile.slug` must equal `profile.spec`** — `merge.mjs` fails the build if they diverge
+- **A media folder name must match its showcase slug** — case-study routes are derived from folder names
+- **`t('section.key')` returns a resolved string** — never index it again by `[lang]` (that yields `undefined` and silently drops the translation)
+- **Showcase `order` must be unique** per language list, and the same per slug across languages
 
 ---
 
@@ -507,7 +524,7 @@ Save output as `src/content/cv/{lang}.yaml`.
 | `src/content/languages/languages.yml` | Languages + default |
 | `src/content/profiles/profiles.yml` | Profiles + slugs |
 | `src/content/i18n/translations.yaml` | All UI strings |
-| `src/content/showcase/projects.yaml` | Showcase project list |
+| `src/content/showcase/projects_{lang}.yaml` | Showcase project list (per language) |
 | `src/scripts/merge.mjs` | YAML merge logic |
 | `src/components/Layout.astro` | Header, nav, lang switcher, footer |
 | `src/components/ProjectPage.astro` | Case study page template |
